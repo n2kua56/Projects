@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<OrderedTest name="profiletest" storage="c:\users\toshibanetbook\documents\visual studio 2010\projects\ezdesk\ezdesktest\profiletest.orderedtest" id="21c41784-6b8d-4af0-b505-8e4670df193f" continueAfterFailure="true" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestLinks>
+    <TestLink id="72b1f1fc-9e5a-87e7-95c8-916c8160bd98" name="CreateCategory" storage="bin\debug\ezdesktest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="354bf568-b3a4-c6e5-4f70-d13c305c6831" name="ReadCategory" storage="bin\debug\ezdesktest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="87a0e510-2c74-f403-83e7-022560e6fd2a" name="UpdateCategory" storage="bin\debug\ezdesktest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <TestLink id="ada3e3a1-d58e-0ff3-2caf-160ccbae85b2" name="ListCategory" storage="bin\debug\ezdesktest.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  </TestLinks>
+</OrderedTest>

@@ -1,0 +1,454 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9D8D4B5F-78E9-4147-9E7C-EAA0528E8058}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EZDesk</RootNamespace>
+    <AssemblyName>EZDesk</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.7.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\3rdParty\MySQL Connector Net 6.9.7\Assemblies\v4.0\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox1.Designer.cs">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calendar2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calendar2.Designer.cs">
+      <DependentUpon>Calendar2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DDControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DDControl.designer.cs">
+      <DependentUpon>DDControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAuditLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAuditLog.Designer.cs">
+      <DependentUpon>frmAuditLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAvailableProperties.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAvailableProperties.Designer.cs">
+      <DependentUpon>frmAvailableProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCalendar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCalendar.Designer.cs">
+      <DependentUpon>frmCalendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDocumentEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDocumentEdit.Designer.cs">
+      <DependentUpon>frmDocumentEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDocuments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDocuments.Designer.cs">
+      <DependentUpon>frmDocuments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmExternalProgram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExternalProgram.Designer.cs">
+      <DependentUpon>frmExternalProgram.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFilePlace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFilePlace.Designer.cs">
+      <DependentUpon>frmFilePlace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmForms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmForms.Designer.cs">
+      <DependentUpon>frmForms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPassword.designer.cs">
+      <DependentUpon>frmPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPerson.Designer.cs">
+      <DependentUpon>frmPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSetup.Designer.cs">
+      <DependentUpon>frmSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSetupDocuments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSetupDocuments.Designer.cs">
+      <DependentUpon>frmSetupDocuments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSetupDrawer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSetupDrawer.Designer.cs">
+      <DependentUpon>frmSetupDrawer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSetupSystem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSetupSystem.Designer.cs">
+      <DependentUpon>frmSetupSystem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSetupTab.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSetupTab.designer.cs">
+      <DependentUpon>frmSetupTab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSetupUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSetupUsers.Designer.cs">
+      <DependentUpon>frmSetupUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTestNewCalendar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTestNewCalendar.Designer.cs">
+      <DependentUpon>frmTestNewCalendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUser.Designer.cs">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="iDesk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="iDesk.Designer.cs">
+      <DependentUpon>iDesk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItemInfo.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AboutBox1.resx">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calendar2.resx">
+      <DependentUpon>Calendar2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAuditLog.resx">
+      <DependentUpon>frmAuditLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAvailableProperties.resx">
+      <DependentUpon>frmAvailableProperties.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCalendar.resx">
+      <DependentUpon>frmCalendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDocumentEdit.resx">
+      <DependentUpon>frmDocumentEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDocuments.resx">
+      <DependentUpon>frmDocuments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExternalProgram.resx">
+      <DependentUpon>frmExternalProgram.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFilePlace.resx">
+      <DependentUpon>frmFilePlace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmForms.resx">
+      <DependentUpon>frmForms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPassword.resx">
+      <DependentUpon>frmPassword.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPerson.resx">
+      <DependentUpon>frmPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSetup.resx">
+      <DependentUpon>frmSetup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSetupDocuments.resx">
+      <DependentUpon>frmSetupDocuments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSetupDrawer.resx">
+      <DependentUpon>frmSetupDrawer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSetupSystem.resx">
+      <DependentUpon>frmSetupSystem.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSetupTab.resx">
+      <DependentUpon>frmSetupTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSetupUsers.resx">
+      <DependentUpon>frmSetupUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTestNewCalendar.resx">
+      <DependentUpon>frmTestNewCalendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUser.resx">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="iDesk.resx">
+      <DependentUpon>iDesk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\arrow.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\calendar03.jpg" />
+    <Content Include="Images\desktop.ico" />
+    <Content Include="Images\desktop.jpg" />
+    <Content Include="Images\female.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logon01.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logon02.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logon03.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logon04.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logon05.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logon06.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logon07.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logon08.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logon09.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logon10.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logon11.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logon12.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Logon13.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\male.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\todo04.ico" />
+    <Content Include="Images\todo04.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Acrobat">
+      <Guid>{E64169B3-3592-47D2-816E-602C5C13F328}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AcrobatAccessLib">
+      <Guid>{C523F390-9C83-11D3-9094-00104BD0D535}</Guid>
+      <VersionMajor>3</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="WordViewer">
+      <Guid>{B5ADAFC6-C564-4821-A2EC-E2A41DA06E4E}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Calendar.NET\Calendar.NET.csproj">
+      <Project>{6CBC43B6-E950-49B2-B14A-563C50FCD5C3}</Project>
+      <Name>Calendar.NET</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Datalayer\EZDeskDataLayer.csproj">
+      <Project>{26C664AE-3A39-4203-9222-ACBFB3F7547E}</Project>
+      <Name>EZDeskDataLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EZTeller\EZTeller.csproj">
+      <Project>{69EE67D5-A8FE-42FE-A3AD-8CC065CB6144}</Project>
+      <Name>EZTeller</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EZUtils\EZUtils.csproj">
+      <Project>{2C5FED19-8EC6-4E84-945B-CE443D6748ED}</Project>
+      <Name>EZUtils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MessageCenter\MessageCenter.csproj">
+      <Project>{D42E89BF-116B-4812-9372-EA57A7A418F5}</Project>
+      <Name>MessageCenter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\System.Windows.Forms.Calendar\System.Windows.Forms.Calendar.csproj">
+      <Project>{25649F08-3046-4891-ADB8-7EA787B57063}</Project>
+      <Name>System.Windows.Forms.Calendar</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ToDo\ToDo.csproj">
+      <Project>{ECFC09E8-9CAA-490E-A1FB-81A7B63FF084}</Project>
+      <Name>ToDo</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

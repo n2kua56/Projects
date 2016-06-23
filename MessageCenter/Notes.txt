@@ -1,0 +1,14 @@
+Auth Type: User/Login | APOP | NTLM 
+ 	ServerAuthType enum
+	=======================================================================================================
+	Specifies that the mail server uses plain text authentication.
+	Specifies that the mail server uses MD5 hash authentication.
+	Specifies that the mail server uses NTLM authentication.
+
+Protocol:  POP3 | IMAP4 | ExchangeEW | ExchangeWebDav
+	ServerProtocol enum
+	=======================================================================================================
+	Specifies that the mail server uses POP3 protocol. 
+	Specifies that that the mail server uses IMAP4 protocol. 
+	Specifies that that the mail server uses Exchange Web Service protocol (Exchange 2007 or later version). 
+	Specifies that that the mail server uses Exchange WebDAV protocol (Exchange 2000 or Exchange 2003). 
