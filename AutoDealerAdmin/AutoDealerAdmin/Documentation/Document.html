@@ -1,0 +1,223 @@
+﻿<!DOCTYPE html>
+<html>
+  <body>
+    <h1><a name="AutoDealerAdmin"></a>Auto Dealer Admin</h1>
+      <p class="developer">This system, because the size is small, uses a
+      paradign where only the Form1 code can have access to MySQL.  As forms
+      are instantiated and shown, any data necessary must be passed in a form
+      property.  On return from the form the DialogResult is checked and if
+      the OK button (Usually titled Add/Update) then the data is pulled from
+      the forms properties and the MySQL INSERT or UPDATE is called.</p>
+      <p class="developer">This also rquires the forms to make sure the
+      updated fields on the form have been saved in the properties.</p>
+    <H2><a name="AutoDealerTables"></a>Auto Dealer Tables</H2>
+    <p>
+      To dynamically build the web site pages information
+      needs to be pulled from various tables.  Auto Dealer
+      uses the MySQL system to build, access and maintain
+      these tables.
+    </p>
+      <h3><a name="VehicleTable"></a>Vehicle Table</h3>
+
+      <!-- ---------------------------------------------------------------- -->
+      <h3><a name="CategoryTable"></a>Category Table</h3>
+
+      <!-- ---------------------------------------------------------------- -->
+      <h3><a name="GalleryTable"></a>Gallery Table</h3>
+
+      <!-- ---------------------------------------------------------------- -->
+      <h3><a name="PropertiesTable"></a>Properties Table</h3>
+    
+    <H2><a name="MainFormTabs"></a>Main form Tabs</H2>
+      <h3><a name="VehicleTab"></a>Vehicle Tab</h3>
+      <p>
+          <b>PURPOSE:</b>The intent of the Vehicle Tab is to display ALL
+          "ACTIVE" vehicles and to let the user select vehicles to EDIT or to
+          ADD new vehicles.  EDITING and ADDING of vehicles is accomplished by
+          launching the frmVehicle form.
+      </p>
+      <img src="VehicleTab.jpg" />
+      <p>
+          ALL information needed to populate the frmVehicle form is contained
+          in the grid. Fields that are not necessary to be viewed have been set
+          in display=false.  When the user selects to ADD or EDIT a vehicle the
+          frmVehicle form is created and then the properties of that form are
+          filled in, the Gallery photos are obtained and passed as a DataTable
+          in the ??? property and then the form is shown.
+      </p>
+
+      <p>
+          On return from the frmVehicle form IF the DialogResult is "OK" then
+          the information about the vehicle is obtained from the properties and
+          a vehicle record is either INSERTED or UPDATED. We take the cheap way
+          out and refresh the grid by doing a new SELECT.
+      </p>
+
+      <p>
+          Vehicles are made "INACTIVE" by setting the Ending Date to midnight
+          of today's date.
+      </p>
+
+      <!-- Add links to the VehicleForm and Vehicle Table here -->
+      <p>
+          More information can be found at <a href="#VehicleForm">VehicleForm</a>
+          and <a href="#VehicleTable">VehicleTable.</a>
+      </p>
+
+      <p>
+          <b>TODO:</b> Need a way to show "INACTIVE" vehicles to change them
+          back to "ACTIVE".
+      </p>
+
+      <!-- -------------------------------------------------------------- -->
+      <h3><a name="CategoryTab"></a>Category Tab</h3>
+      <p><b>PURPOSE: </b>This tab shows you the categories that have been 
+      defined so far.  From here you can add new categories, edit the
+      existing categories and possibly delete categories.</p>
+      <img src="CatagoriesTab.jpg" />
+      <p>Right click to bring up a menu.  The line you are pointing at
+      will determine things like the line that is going to be edited.  You
+      may also double click on a line to edit that line.</p>
+
+      <p>The different columns will be explained in the <a href="#CategoryForm">
+    Category Form</a> section.</p>
+
+      <!-- -------------------------------------------------------------- -->
+      <h3><a name="GalleryTab"></a>Gallery Tab</h3>
+
+      <!-- -------------------------------------------------------------- -->
+      <h3><a name="PropertiesTab"></a>Properties Tab</h3>
+      <p><b>PURPOSE:</b> This shows the currently defined properties that
+      are used by the Web Site.  Adding properties here without the Web Site
+      CODE making use of them has NO effect on the Web Site.  Changing the
+      values here may have serious effects on the Web Site.  This tab is
+      for the use of the Web Site programmer.</p>
+      <img src="PropertiesTab.jpg" />
+
+    <!-- ---------------------------------------------------------------- -->
+    <!--                                                                  -->
+    <!-- ---------------------------------------------------------------- -->
+    <H2><a name="AutoDealerForms"></a>Forms</H2>
+      <h3><a name="VehicleForm"></a>Vehicle Form</h3>
+      <p>
+          <b>PURPOSE:</b> This form is to display the details about a vehice
+          (if this is an EDIT or DELETE) and to let the user add or change
+          values. In the case of an ADD the user will see empty fields and
+          will fill-in whatever data they have.  The "Name" and category
+          fields are required.
+      </p>
+      <img src="VehicleForm.jpg" />
+      <p>
+          The Vehicle section is were basic data about the vehicle is
+          entered. Vehicle Name, Category, VIN and price.
+      </p>
+
+      <p>
+          The "Short Description" is the text that will be displayed at
+          ??? on the web site.
+      </p>
+
+      <p>The "Page Text" is displayed on the Vehile page.</p>
+
+      <p>
+          This is also where the "Small" picture and "Large" picture are
+          Selected. The "Small" picture is displayed on the Web Site Category
+          page and on the Vehicle Page. The "Large" picture is displayed when
+          the user clicks the "Small" picture. See "Photo Tab" for details on
+          getting pictures into the system.
+      </p>
+
+      <p>
+          Pressing the "..." button to the right of the fileName will
+          present you with the typical Windows File Selection form. Select the
+          file you want for the "Small" or "Large". Once selected the picture
+          will be displayed below.  <b>NOTE:</b> These displays are NOT the
+          same size as will be shown on the Web Pages.
+      </p>
+
+      <p>
+          Every attempt is made to make sure the Upload check boxes are set
+          correctly (checked when the program thinks the picture file has NOT
+          been uploaded yet. However here is where you can override and tell
+          the system to upload the file or not.
+      </p>
+
+      <p>
+          The Gallery section is where you can see the Gallery pictures that
+          have been assigned to this Vehicle. The Gallery is a set of thumb
+          nail pictures that are displayed on the Vehicle Web page and the user
+          can click on them to see the larger picture.
+      </p>
+
+      <p>
+          Right Clicking in the list of file names will let you select more
+          Gallery pictures to be added or removed. The Photo page is where you
+          can select the "Large" picture to associate with the thumb nail
+          Gallery picture and set the Upload check box.
+      </p>
+
+      <p>
+          More information can be found at <a href="#VehicleTab">Vehicle Tab</a>,
+          <a href="#VehicleTable">Vehicle Table</a>, the Photo Tab, the
+          Vehicle Web Page and the Category Web Page.
+      </p>
+
+      <!-- ---------------------------------------------------------------- -->
+      <hr />
+      <h3><a name="CategoryForm"></a>Category Form</h3>
+      <p><b>PURPOSE:</b> To let the user define the Categories that will be
+      used in the Web Site.  The user can change the sort order (sequence
+      that the Categories will be displayed) and the text that will be displayed
+      on the Web Site.</p>
+
+      <p class="developer">When the Category Tab page needs to start up the
+      Category Form, the form is instantiated, the properties are filled in 
+      from the datagrid on the Tab form and then the form is shown.</p>
+      <img src="CategoriesForm.jpg" />
+      <p>The Category name is the name that will appear in the menu on the
+      Web Site as well as at the top of the Category Pages.</p>
+
+      <p>The Category Description will Display on the Category Pages on the
+      Web Site.</p>
+
+      <p>The Sequence is to set the sort order. There is no need for these number
+      to be consecutive (holes like 1,2,5,6,20) are fine.  Even duplicate sequence
+      number are accepted but you will not be able to count on the exact ordering
+      for the items with duplicates.</p>
+
+      <p>Not sure what the Web Page Description will be used for at this time.</p>
+
+      <p>Pressing the "Add" or "Edit" buttons will cause the data to be saved
+      and the form to be removed. The Tab page will be refreshed to show the
+      changes/additions you have made.</p>
+
+      <p class="developer">When control is returned to the Category Tab, the
+      DialogResult is checked for OK (the Add/Update button pressed).  If so
+      the code then pulls the data from the properties and makes the MySQL
+      call to INSERT or UPDATE the data.</p>
+      <hr />
+
+      <!-- ---------------------------------------------------------------- -->
+      <h3><a name="GalleryForm"></a>Gallery Form</h3>
+
+      <!-- ---------------------------------------------------------------- -->
+      <h3><a name="PropertiesForm"></a>Properties Form</h3>
+
+      <h1><a name="AutoDealerWebSite"></a>Web Site</h1>
+      <h2><a name="MainPage"></a>Main Page</h2>
+      <img src="WebSiteHomePage.jpg" />
+
+      <h2><a name="CategoriesPage"></a>Categories Page</h2>
+      <img src="WebSiteCategoryPage.jpg" />
+
+      <h2><a name="CategoryPage"></a>Category Page</h2>
+      <img src="WebSiteConvertiblesCategoryPage.jpg" />
+
+      <h2><a name="VehiclePage"></a>Vehicle Page</h2>
+
+      <h2><a name="LargePicturePage"></a>Large Picture Page</h2>
+
+      <h2><a name="ContactUsPage"></a>Contact Us Page</h2>
+
+  </body>
+</html>
