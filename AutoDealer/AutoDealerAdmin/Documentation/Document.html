@@ -1,0 +1,559 @@
+﻿<!DOCTYPE html>
+<html>
+  <body>
+      <h0><a name="TopOfDocument">AutoDealer System</a></h0>
+      <p>
+          This document is detail the specifications for the various parts of
+          the AutoDealer System.  The AutoDealer system is an admin program
+          and a Web Site. The admin program is used to define aspects of the 
+          web site and to define the vehicles currently for sale. The web site
+          is made up of dymanic web pages to display the data defined by the
+          admin program.  
+      </p>
+      <p>
+          This document has some use in using the admin program and understanding
+          how that relates to the web site pages.  It's major use is as a system
+          design document with information intended for the developers of the
+          AutoDealer System.
+      </p>
+      <p>
+          The document is broken up into 2 chapters, the Admin program and the 
+          second chapter is the Web Site.
+      </p>
+      <ul>
+          <li><a href="#AutoDealerAdmin">Auto Dealer Admin</a>
+          <ul>
+              <li>
+                  <a href="#AutoDealerTables">Auto Dealer Tables</a>
+                  <ul>
+                      <li><a href="#VehicleTable">Vehicle Table</a></li>
+                      <li><a href="#CategoryTable">Category Table</a></li>
+                      <li><a href="#GalleryTable">Gallery Table</a></li>
+                      <li><a href="#PropertiesTable">PropertiesTable</a></li>
+                  </ul>
+              </li>
+              <li>
+                  <a href="#MainFormTabs">Main Form Tabs</a>
+                  <ul>
+                      <li><a href="#VehicleTab">Vehicle Tab</a></li>
+                      <li><a href="#CategoryTab">Category Tab</a></li>
+                      <li><a href="#GalleryTab">Gallery Tab</a></li>
+                      <li><a href="#PropertiesTab">Properties Tab</a></li>
+                      <li><a href="#SettingsTab">Settings Tab</a></li>
+                  </ul>
+              </li>
+              <li><a href="#AutoDealerForms">Auto Dealer Forms</a></li>
+          </ul></li>
+          <li><a href="#AutoDealerWebSite">Auto Dealer Web Site</a></li>
+      </ul>
+    <hr />
+
+    <!-- ---------------------------------------------------------------- -->
+    <!-- This chapter discusses the AutoDealer Admin program.  In it I    -->
+    <!-- explain the MySQL tables and how they relate to the Web Site.    -->
+    <!-- I also discuse each of the tabs on the admin program, and what   -->
+    <!-- they are for. Finally I show the various Windows Forms that are  -->
+    <!-- displayed and what the fields need to be filled with.            -->
+    <!-- ---------------------------------------------------------------- -->
+    <h1><a name="AutoDealerAdmin">Auto Dealer Admin</a></h1>
+      <p class="developer">This system, because the size is small, uses a
+      paradign where only the Form1 code can have access to MySQL.  As forms
+      are instantiated and shown, any data necessary must be passed in a form
+      property.  On return from the form the DialogResult is checked and if
+      the OK button (Usually titled Add/Update) then the data is pulled from
+      the forms properties and the MySQL INSERT or UPDATE is called.</p>
+      <p class="developer">This also rquires the forms to make sure the
+      updated fields on the form have been saved in the properties.</p>
+      <br />
+      <p><b>CHAPTER CONTENTS</b></p>
+      <ul>
+          <li><a href="#AutoDealerTables">Auto Dealer Tables</a>
+          <ul>
+              <li><a href="#VehicleTable">Vehicle Table</a></li>
+              <li><a href="#CategoryTable">Category Table</a></li>
+              <li><a href="#GalleryTable">Gallery Table</a></li>
+              <li><a href="#PropertiesTable">PropertiesTable</a></li>
+          </ul></li>
+          <li><a href="#MainFormTabs">Main Form Tabs</a>
+          <ul>
+              <li><a href="#VehicleTab">Vehicle Tab</a></li>
+              <li><a href="#CategoryTab">Category Tab</a></li>
+              <li><a href="#GalleryTab">Gallery Tab</a></li>
+              <li><a href="#PropertiesTab">Properties Tab</a></li>
+          </ul></li>
+          <li><a href="#AutoDealerForms">Auto Dealer Forms</a></li>
+      </ul>
+      <hr />
+
+    <!-- ---------------------------------------------------------------- -->
+    <!-- This secontion discusses the MySQL tables.  The data in these    -->
+    <!-- tables directally affects the operation of the dynamicaly built  -->
+    <!-- Web Site Pages.                                                  -->
+    <!-- ---------------------------------------------------------------- -->
+    <H2><a name="AutoDealerTables"></a>Auto Dealer Tables</H2>
+    <p>
+      To dynamically build the web site pages information
+      needs to be pulled from various tables.  Auto Dealer
+      uses the MySQL system to build, access and maintain
+      these tables.
+    </p>
+      <br />
+      <p><b>TABLE SECTION CONTENTS</b></p>
+      <ul>
+          <li><a href="#VehicleTable">Vehicle Table</a></li>
+          <li><a href="#CategoryTable">Category Table</a></li>
+          <li><a href="#GalleryTable">Gallery Table</a></li>
+          <li><a href="#PropertiesTable">PropertiesTable</a></li>
+      </ul>
+      <hr />
+
+      <!-- ---------------------------------------------------------------- -->
+      <!-- The Vehicle table where the vehicles displayed on the web page   -->
+      <!-- are maintained.                                                  -->
+      <!-- ---------------------------------------------------------------- -->
+      <h3><a name="VehicleTable">Vehicle Table</a></h3>
+      <p class="developer">
+        This is the table to holds the information on each
+        vehicle that has, is or will be shortly listed on the web site.  Each
+        vehicle is assigned an ID by the system when you create a new vehicle
+        record in the <a href="#VehicleTab">Vehicles Tab.</a> The data that is 
+        supplied by the user is then stored in this table.
+      </p>
+      <img src="VehicleTable.jpg" />
+      <p class="developer">
+          The start and end dates that this vehicle will be listed on the web 
+          site are set here. For the vehicle to be displayed the current date 
+          MUST fall between these dates.
+      </p>
+      <p class="developer">
+          The descriptive text that will displayed on the web
+          site are specified in the PageDescription and ShortDescription.
+      </p>
+      <p class="developer">
+          The pictures that will be displayed are specified
+          in the SmallPic and LargePic. The small pic is displayed on the vehicle
+          detail page and in the <a href="#CategoryPage">category page</a>. The 
+          large pic is displayed when the small picture is clicked on the vehicle 
+          detail page. The gallery pictures, if any, are specified in the gallery 
+          table. The smallPicUpload and largePicUpload are set to "1" when the
+          user wants the picture files uploaded.
+      </p>
+      <p class="developer">
+          The active field can be set to 0 to "soft delete" the record.
+      </p>
+      <br />
+      <p>
+      <a href="#TopOfDocument">Top</a>&nbsp;&nbsp;
+      <a href="#AutoDealerAdmin">Auto Dealer Admin</a>&nbsp;&nbsp;
+      <a href="#AutoDealerTables">Auto Dealer Tables</a>
+      </p>
+      <hr />
+
+      <!-- ---------------------------------------------------------------- -->
+      <!-- The Category table where the Menu items are created as well as   -->
+      <!-- as the categories the vehicles are added to.                     -->
+      <!-- ---------------------------------------------------------------- -->
+      <h3><a name="CategoryTable">Category Table</a></h3>
+      <p class="developer">
+          The category table defines the classes that a vehicle can belong to. At
+          this time there can only be one class for each vehicle. These records
+          are also used to fill the "Category" menu item.
+      </p>
+      <img src="CategoryTable.jpg" />
+      <p class="developer">
+          You can control the sequence that the categories will be displayed in
+          the menu by setting the seq field. When these are read in there is an
+          ORDER BY on the seq field.  Two entries can have the same seq value,
+          and the entries will be sorted in respect to the other entries, but
+          the order within entries with the same seq value can not be pre-determined.
+      </p>
+      <p class="developer">
+          The Description field is for the person entering the data in the Admin
+          routines <a href="#CategoryTab">Category Tab</a>. The PageDescription
+          is optional and if specified is diplayed on the <a href="#CategoryPage">Category Page</a>
+          prior to any of the vehicle pictures.
+      </p>
+      <br />
+      <p>
+      <a href="#TopOfDocument">Top</a>&nbsp;&nbsp;
+      <a href="#AutoDealerAdmin">Auto Dealer Admin</a>&nbsp;&nbsp;
+      <a href="#AutoDealerTables">Auto Dealer Tables</a>
+      </p>
+      <hr />
+
+      <!-- ---------------------------------------------------------------- -->
+      <h3><a name="GalleryTable">Gallery Table</a></h3>
+      <p class="developer">
+          TheGalleries have not yet been implemented. When they are they will be
+          a series of small pictures about a vehicle displayed on the 
+          <a href="#VehiclePage">vehicle page</a>
+      </p>      
+      <img src="GalleryTable.jpg" />
+      <a href="#TopOfDocument">Top</a>&nbsp;&nbsp;
+      <a href="#AutoDealerAdmin">Auto Dealer Admin</a>&nbsp;&nbsp;
+      <a href="#AutoDealerTables">Auto Dealer Tables</a>
+      <hr />
+
+      <!-- ---------------------------------------------------------------- -->
+      <!-- The Properties Table, where system settings are stored.          -->
+      <!-- ---------------------------------------------------------------- -->
+      <h3><a name="PropertiesTable">Properties Table</a></h3>
+      <p class="developer">
+          This table should only be added to by developers. Putting a property
+          into this table will have no affect on the web site until code has
+          been added to the web site pages to use that value.  Some properties
+          can be modified by users but must be done carefully!
+      </p>
+      <img src="PropertyTable.jpg" />
+      <br />
+      <p>
+      <a href="#TopOfDocument">Top</a>&nbsp;&nbsp;
+      <a href="#AutoDealerAdmin">Auto Dealer Admin</a>&nbsp;&nbsp;
+      <a href="#AutoDealerTables">Auto Dealer Tables</a>
+      </p>
+      <hr />
+
+    <!-- ---------------------------------------------------------------- -->
+    <!-- This section discusses the various "Tabs" on the admin program.  -->
+    <!-- The paradign used is a grid is displayed with the current data,  -->
+    <!-- the user can either double click to edit the data in the row     -->
+    <!-- they double click or they can right click to bring up a context  -->
+    <!-- menu to add, edit or delete, once I figure out what a delete     -->
+    <!-- does.                                                            -->
+    <!-- ---------------------------------------------------------------- -->
+    <H2><a name="MainFormTabs">Main form Tabs</a></H2>
+      <p>
+          This section discusses the various "Tabs" on the admin program.
+          The paradign used is a grid is displayed with the current data,
+          the user can either doubleclick to edit the data in the row
+          they double clicked or they can right click to bring up a context
+          menu to add, edit or delete, once I figure out what a delete does.
+      </p>
+      <br />
+      <ul>
+          <li><a href="#VehicleTab">Vehicle Tab</a></li>
+          <li><a href="#CategoryTab">Category Tab</a></li>
+          <li><a href="#GalleryTab">Gallery Tab</a></li>
+          <li><a href="#PropertiesTab">Properties Tab</a></li>
+          <li><a href="#SettingsTab">Settings Tab</a></li>
+      </ul>
+      <br />
+      <p></p>
+
+      <!-- ---------------------------------------------------------------- -->
+      <!-- The Vehicle Tab, where vehicles are defined.                     -->
+      <!-- ---------------------------------------------------------------- -->
+      <h3><a name="VehicleTab">Vehicle Tab</a></h3>
+      <p>
+          <b>PURPOSE:</b>The intent of the Vehicle Tab is to display ALL
+          "ACTIVE" vehicles and to let the user select vehicles to EDIT or to
+          ADD new vehicles.  EDITING and ADDING of vehicles is accomplished by
+          launching the frmVehicle form.
+      </p>
+      <img src="VehicleTab.jpg" />
+      <p>
+          ALL information needed to populate the frmVehicle form is contained
+          in the grid. Fields that are not necessary to be viewed have been set
+          in display=false.  When the user selects to ADD or EDIT a vehicle the
+          frmVehicle form is created and then the properties of that form are
+          filled in, the Gallery photos are obtained and passed as a DataTable
+          in the ??? property and then the form is shown.
+      </p>
+
+      <p>
+          On return from the frmVehicle form IF the DialogResult is "OK" then
+          the information about the vehicle is obtained from the properties and
+          a vehicle record is either INSERTED or UPDATED. We take the cheap way
+          out and refresh the grid by doing a new SELECT.
+      </p>
+
+      <p>
+          Vehicles are made "INACTIVE" by setting the Ending Date to midnight
+          of today's date.
+      </p>
+
+      <!-- TODO: Add links to the VehicleForm and Vehicle Table here -->
+      <p>
+          More information can be found at <a href="#VehicleForm">VehicleForm</a>
+          and <a href="#VehicleTable">VehicleTable.</a>
+      </p>
+
+      <p>
+          <b>TODO:</b> Need a way to show "INACTIVE" vehicles to change them
+          back to "ACTIVE".
+      </p>
+      <br />
+      <p>
+          <a href="#TopOfDocument">Top</a>&nbsp;&nbsp;
+          <a href="#AutoDealerAdmin">Auto Dealer Admin</a>&nbsp;&nbsp;
+          <a href="#MainFormTabs">Main Form Tabs</a>
+      </p>
+      <hr />
+
+      <!-- ---------------------------------------------------------------- -->
+      <!-- The Category Tab where the vehicle categories are defined.       -->
+      <!-- ---------------------------------------------------------------- -->
+      <h3><a name="CategoryTab">Category Tab</a></h3>
+      <p><b>PURPOSE: </b>This tab shows you the categories that have been 
+      defined so far.  From here you can add new categories, edit the
+      existing categories and possibly delete categories.</p>
+      <img src="CatagoriesTab.jpg" />
+      <p>Right click to bring up a menu.  The line you are pointing at
+      will determine things like the line that is going to be edited.  You
+      may also double click on a line to edit that line.</p>
+
+      <p>The different columns will be explained in the 
+        <a href="#CategoryForm">Category Form</a> section.
+      </p>
+      <br />
+      <p>
+          <a href="#TopOfDocument">Top</a>&nbsp;&nbsp;
+          <a href="#AutoDealerAdmin">Auto Dealer Admin</a>&nbsp;&nbsp;
+          <a href="#MainFormTabs">Main Form Tabs</a>
+      </p>
+      <hr />
+
+      <!-- -------------------------------------------------------------- -->
+      <!-- The Gallery Tab. Gallery pictures are defined here and         -->
+      <!-- associated with vehicles.                                      -->
+      <!-- -------------------------------------------------------------- -->
+      <h3><a name="GalleryTab">Gallery Tab</a></h3>
+      <br />
+      <p>
+          <a href="#TopOfDocument">Top</a>&nbsp;&nbsp;
+          <a href="#AutoDealerAdmin">Auto Dealer Admin</a>&nbsp;&nbsp;
+          <a href="#MainFormTabs">Main Form Tabs</a>
+      </p>
+      <hr />
+
+      <!-- -------------------------------------------------------------- -->
+      <!-- The Properties Tab.  Settings that affect the running of the   -->
+      <!-- web site are set here.                                         -->
+      <!-- -------------------------------------------------------------- -->
+      <h3><a name="PropertiesTab">Properties Tab</a></h3>
+      <p><b>PURPOSE:</b> This shows the currently defined properties that
+      are used by the Web Site.  Adding properties here without the Web Site
+      CODE making use of them has NO effect on the Web Site.  Changing the
+      values here may have serious effects on the Web Site.  This tab is
+      for the use of the Web Site programmer.</p>
+      <img src="PropertiesTab.jpg" />
+      <br />
+      <p>
+          <a href="#TopOfDocument">Top</a>&nbsp;&nbsp;
+          <a href="#AutoDealerAdmin">Auto Dealer Admin</a>&nbsp;&nbsp;
+          <a href="#MainFormTabs">Main Form Tabs</a>
+      </p>
+      <hr />
+
+      <!-- -------------------------------------------------------------- -->
+      <!-- The Settings Tab. Settings that affect the running of the      -->
+      <!-- admin program are set here.                                    -->
+      <!-- -------------------------------------------------------------- -->
+      <h3><a name="SettingsTab">Settings Tab</a></h3>
+      <p>
+          <b>PURPOSE:</b> This tab lets the user change the settings that 
+          affects the running of the Admin program.
+      </p>
+      <img src="SettingsTab.jpg" />
+      <br />
+      <p>
+          <a href="#TopOfDocument">Top</a>&nbsp;&nbsp;
+          <a href="#AutoDealerAdmin">Auto Dealer Admin</a>&nbsp;&nbsp;
+          <a href="#MainFormTabs">Main Form Tabs</a>
+      </p>
+      <hr />
+
+    <!-- ---------------------------------------------------------------- -->
+    <!-- As mentioned, when a user selects to add an item or edit an      -->
+    <!-- item, a windows form is launched to give the user that ability   -->
+    <!-- ---------------------------------------------------------------- -->
+    <H2><a name="AutoDealerForms">Forms</a></H2>
+      <p>
+          As mentioned, the paradign we use is to display the current items
+          in a grid and let the user double click to edit or right click
+          to bring up a context menu to select add or edit (deletes when
+          I figure what a delete should do). Once that selection is made a
+          windows form is displayed showing the current values, blank for
+          adding.
+      </p>
+      <br />
+      <ul>
+          <li><a href="#VehicleForm">Vehicle Form</a></li>
+          <li><a href="#CategoryForm">Category Form</a></li>
+          <li><a href="#GalleryForm">Gallery Form</a></li>
+          <li><a href="#PropertiesForm">Properties Form</a></li>
+      </ul>
+      <br />
+      <p></p>
+
+      <!-- -------------------------------------------------------------- -->
+      <!-- The Vehicle Form displays the details about a vehicle and      -->
+      <!-- allows the user to add data or edit data and then save it.     -->
+      <!-- -------------------------------------------------------------- -->
+      <h3><a name="VehicleForm">Vehicle Form</a></h3>
+      <p>
+          <b>PURPOSE:</b> This form is to display the details about a vehice
+          (if this is an EDIT or DELETE) and to let the user add or change
+          values. In the case of an ADD the user will see empty fields and
+          will fill-in whatever data they have.  The "Name" and category
+          fields are required.
+      </p>
+      <img src="VehicleForm.jpg" />
+      <p>
+          The Vehicle section is were basic data about the vehicle is
+          entered. Vehicle Name, Category, VIN and price.
+      </p>
+
+      <p>
+          The "Short Description" is the text that will be displayed at
+          ??? on the web site.
+      </p>
+
+      <p>The "Page Text" is displayed on the Vehile page.</p>
+
+      <p>
+          This is also where the "Small" picture and "Large" picture are
+          Selected. The "Small" picture is displayed on the Web Site Category
+          page and on the Vehicle Page. The "Large" picture is displayed when
+          the user clicks the "Small" picture. See "Photo Tab" for details on
+          getting pictures into the system.
+      </p>
+
+      <p>
+          Pressing the "..." button to the right of the fileName will
+          present you with the typical Windows File Selection form. Select the
+          file you want for the "Small" or "Large". Once selected the picture
+          will be displayed below.  <b>NOTE:</b> These displays are NOT the
+          same size as will be shown on the Web Pages.
+      </p>
+
+      <p>
+          Every attempt is made to make sure the Upload check boxes are set
+          correctly (checked when the program thinks the picture file has NOT
+          been uploaded yet. However here is where you can override and tell
+          the system to upload the file or not.
+      </p>
+
+      <p>
+          The Gallery section is where you can see the Gallery pictures that
+          have been assigned to this Vehicle. The Gallery is a set of thumb
+          nail pictures that are displayed on the Vehicle Web page and the user
+          can click on them to see the larger picture.
+      </p>
+
+      <p>
+          Right Clicking in the list of file names will let you select more
+          Gallery pictures to be added or removed. The Photo page is where you
+          can select the "Large" picture to associate with the thumb nail
+          Gallery picture and set the Upload check box.
+      </p>
+
+      <p>
+          More information can be found at <a href="#VehicleTab">Vehicle Tab</a>,
+          <a href="#VehicleTable">Vehicle Table</a>, the Photo Tab, the
+          Vehicle Web Page and the Category Web Page.
+      </p>
+      <br />
+      <p>
+          <a href="#TopOfDocument">Top</a>&nbsp;&nbsp;
+          <a href="#AutoDealerAdmin">Auto Dealer Admin</a>&nbsp;&nbsp;
+          <a href="#AutoDealerForms">Auto Dealer Forms</a>
+      </p>
+      <hr />
+
+      <!-- ---------------------------------------------------------------- -->
+      <!-- ---------------------------------------------------------------- -->
+      <hr />
+      <h3><a name="CategoryForm">Category Form</a></h3>
+      <p><b>PURPOSE:</b> To let the user define the Categories that will be
+      used in the Web Site.  The user can change the sort order (sequence
+      that the Categories will be displayed) and the text that will be displayed
+      on the Web Site.</p>
+
+      <p class="developer">When the Category Tab page needs to start up the
+      Category Form, the form is instantiated, the properties are filled in 
+      from the datagrid on the Tab form and then the form is shown.</p>
+      <img src="CategoriesForm.jpg" />
+      <p>The Category name is the name that will appear in the menu on the
+      Web Site as well as at the top of the Category Pages.</p>
+
+      <p>The Category Description will Display on the Category Pages on the
+      Web Site.</p>
+
+      <p>The Sequence is to set the sort order. There is no need for these number
+      to be consecutive (holes like 1,2,5,6,20) are fine.  Even duplicate sequence
+      number are accepted but you will not be able to count on the exact ordering
+      for the items with duplicates.</p>
+
+      <p>Not sure what the Web Page Description will be used for at this time.</p>
+
+      <p>Pressing the "Add" or "Edit" buttons will cause the data to be saved
+      and the form to be removed. The Tab page will be refreshed to show the
+      changes/additions you have made.</p>
+
+      <p class="developer">When control is returned to the Category Tab, the
+      DialogResult is checked for OK (the Add/Update button pressed).  If so
+      the code then pulls the data from the properties and makes the MySQL
+      call to INSERT or UPDATE the data.</p>
+      <br />
+      <p>
+          <a href="#TopOfDocument">Top</a>&nbsp;&nbsp;
+          <a href="#AutoDealerAdmin">Auto Dealer Admin</a>&nbsp;&nbsp;
+          <a href="#AutoDealerForms">Auto Dealer Forms</a>
+      </p>
+      <hr />
+
+      <!-- ---------------------------------------------------------------- -->
+      <!-- ---------------------------------------------------------------- -->
+      <h3><a name="GalleryForm"></a>Gallery Form</h3>
+      <br />
+      <p>
+          <a href="#TopOfDocument">Top</a>&nbsp;&nbsp;
+          <a href="#AutoDealerAdmin">Auto Dealer Admin</a>&nbsp;&nbsp;
+          <a href="#AutoDealerForms">Auto Dealer Forms</a>
+      </p>
+      <hr />
+
+      <!-- ---------------------------------------------------------------- -->
+      <!-- ---------------------------------------------------------------- -->
+      <h3><a name="PropertiesForm"></a>Properties Form</h3>
+      <br />
+      <p>
+          <a href="#TopOfDocument">Top</a>&nbsp;&nbsp;
+          <a href="#AutoDealerAdmin">Auto Dealer Admin</a>&nbsp;&nbsp;
+          <a href="#AutoDealerForms">Auto Dealer Forms</a>
+      </p>
+      <hr />
+
+      <!-- ---------------------------------------------------------------- -->
+      <!-- ---------------------------------------------------------------- -->
+      <h1><a name="AutoDealerWebSite">Auto Dealer Web Site</a></h1>
+      <ul>
+          <li><a href="#MainPage">Main Page</a></li>
+          <li><a href="#CategoriesPage">Categories Page</a></li>
+          <li><a href="#CategoryPage">Category Page</a></li>
+          <li><a href="#VehiclePage">Vehicle Page</a></li>
+          <li><a href="#LargePicturePage">Large Picture Page</a></li>
+          <li><a href="#ContactUsPage">Contact Us Page</a></li>
+      </ul>
+      <h2><a name="MainPage"></a>Main Page</h2>
+      <img src="WebSiteHomePage.jpg" />
+      <a href="#TopOfDocument">Top</a>
+
+      <h2><a name="CategoriesPage"></a>Categories Page</h2>
+      <img src="WebSiteCategoryPage.jpg" />
+
+      <h2><a name="CategoryPage"></a>Category Page</h2>
+      <img src="WebSiteConvertiblesCategoryPage.jpg" />
+      <a href="#TopOfDocument">Top</a>
+
+      <h2><a name="VehiclePage"></a>Vehicle Page</h2>
+      <a href="#TopOfDocument">Top</a>
+
+      <h2><a name="LargePicturePage"></a>Large Picture Page</h2>
+      <a href="#TopOfDocument">Top</a>
+
+      <h2><a name="ContactUsPage"></a>Contact Us Page</h2>
+      <a href="#TopOfDocument">Top</a>
+  </body>
+</html>

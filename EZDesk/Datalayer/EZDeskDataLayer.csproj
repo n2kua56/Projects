@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{26C664AE-3A39-4203-9222-ACBFB3F7547E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Datalayer</RootNamespace>
+    <AssemblyName>Datalayer</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.3.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Address\AddressCtrl.cs" />
+    <Compile Include="Address\Models\Address.cs" />
+    <Compile Include="Communications\CommunicationCtrl.cs" />
+    <Compile Include="Communications\Models\Communication.cs" />
+    <Compile Include="Controller.cs" />
+    <Compile Include="Documents\DocumentsController.cs" />
+    <Compile Include="Documents\Models\SetupTabList.cs" />
+    <Compile Include="ehr\ehrCtrl.cs" />
+    <Compile Include="ehr\Models\DrawerItem.cs" />
+    <Compile Include="ehr\Models\tabItem.cs" />
+    <Compile Include="EthnicityList\EthnicityController.cs" />
+    <Compile Include="EthnicityList\Models\EthnicityItem.cs" />
+    <Compile Include="EZDeskCommon.cs" />
+    <Compile Include="LanguageList\LanguageController.cs" />
+    <Compile Include="LanguageList\Models\LanguageItem.cs" />
+    <Compile Include="Person\Models\Person.cs" />
+    <Compile Include="Person\Models\PersonFormGetDemographics.cs" />
+    <Compile Include="Person\PersonCtrl.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RaceList\Models\RaceItem.cs" />
+    <Compile Include="RaceList\RaceController.cs" />
+    <Compile Include="TODO\Models\ToDoList.cs" />
+    <Compile Include="TODO\Models\ToDoTasks.cs" />
+    <Compile Include="TODO\TODOController.cs" />
+    <Compile Include="User\Models\SetupUserList.cs" />
+    <Compile Include="User\Models\UserDetails.cs" />
+    <Compile Include="User\UserController.cs" />
+    <Compile Include="User\Users.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EZUtils\EZUtils.csproj">
+      <Project>{2C5FED19-8EC6-4E84-945B-CE443D6748ED}</Project>
+      <Name>EZUtils</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MySql.Data.dll" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

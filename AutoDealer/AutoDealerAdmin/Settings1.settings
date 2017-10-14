@@ -1,0 +1,33 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="AutoDealerAdmin" GeneratedClassName="Settings1">
+  <Profiles />
+  <Settings>
+    <Setting Name="connStr" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Server={server};Database={db};Uid={uid};Pwd={password};Convert Zero Datetime=True</Value>
+    </Setting>
+    <Setting Name="db" Type="System.String" Scope="User">
+      <Value Profile="(Default)">autodealer</Value>
+    </Setting>
+    <Setting Name="server" Type="System.String" Scope="User">
+      <Value Profile="(Default)">localhost</Value>
+    </Setting>
+    <Setting Name="uid" Type="System.String" Scope="User">
+      <Value Profile="(Default)">root</Value>
+    </Setting>
+    <Setting Name="password" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="StagingPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\\xampp\\htdocs\\AutoDealer\\AutoDealer\\images</Value>
+    </Setting>
+    <Setting Name="LocalSmallPicPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Staging/SmallPics</Value>
+    </Setting>
+    <Setting Name="LocalLargePicPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Staging/LargePics</Value>
+    </Setting>
+    <Setting Name="LocalGallaryPicPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Staging/GalleryPics</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

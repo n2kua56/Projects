@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="XLog2.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="myServerAddress" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Transformer</Value>
+    </Setting>
+    <Setting Name="myDataBase" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">hamradio</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

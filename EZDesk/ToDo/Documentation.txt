@@ -1,0 +1,95 @@
+﻿<h2>To Do List</h2>
+<table>
+<tr>
+<td>Started</td>
+<td>2014/09/16</td>
+</tr>
+<tr>
+<td>Completed</td>
+<td> </td>
+</tr>
+<tr>
+<td>Added to EZDesk</td>
+<td> </td>
+</table>
+
+<!-- Image of the List of To Do Lists -->
+
+<p>This project implements a TO DO list that will be part of the EZDesk
+program.  It allows the user to Manage a list of To Do lists (Create
+List, Rename List, Delete List).</p>
+<p>Once a list is created the user can manage the Task (or To Do items)
+that belong to that list. Tasks can be Added, Renamed, Deleted, Marked
+as complete and set the target completion date for the task.</p>
+<p>The user presses the "Done" button when they want to close the To Do
+List dialog.</p>
+<h3>To Do Lists</h3>
+<p>To Do Lists are saved in the ToDoList table. The structure for
+this table is:
+<ul>
+<li>ID</li>
+<li>ListName</li>
+<li>IsDeleted</li>
+<li>UserID</li>
+</ul>
+This results of the querry to this table will be used to fill the 
+dataGrid, the button "Add" is shown along with a textBox.</p>
+<p>To add a List the user will type the description/name of the new list
+in the textBox and then press the "Add" button. At this point the textBox
+will be cleared and the new description is added to the dataGrid for
+selction.</p>
+
+<!-- image of the To Do List with the pop-up menu showing -->
+
+<p>To rename a List item the user moves the mouse over the row in the
+dataGrid that is to be renamed. Presses the right mouse button. A pop-up
+menu is shown and the user selects rename. The current name of the list
+is copied to the textBox, the "Add" button is changed to "Save". The user
+then changes the name in the textBox and presses the "Save" button when
+the name is correct.  The row in the dataTable is updated, the textBox
+is cleared and the "Save" button is returned to "Add"</p>
+
+<!-- image of the To Do List with a single item doing an edit -->
+
+<p>To delete a list the user brings up the pop-up menu as above. Selects
+the delete option. The row in the dataGrid for that List is removed.</p>
+<h3>Tasks</h3>
+
+<!-- image of the Task list showing with a single item -->
+
+<p>Once a user has selected a List by clicking on it, the dataGrid changes
+to display the list of tasks for the selected List. From here the user
+can maintain the list of tasks; Add Tasks, Rename Tasks, Mark task completed,
+set a scheduled completion date/time and delete tasks.</p>
+<p>To add a task the user types a task description/name in the textBox and
+presses the Add button.  The textBox will clear and the new task will show
+up in the dataGrid.</p>
+
+<!-- image of the Task list showing the pop-up menu -->
+
+<p>To rename a task the user will place the mouse on the row with the task
+to be renamed, press the right mouse button and a pop-up menu will be
+displayed. Press the rename option and the task name will be copied into
+the textBox and the the "Add" button changes to "Save". The user can now
+change the text. When the text is what you want, press the "Save" button, 
+the textBox is cleared, the "Save" button returns to "Add" and the task
+in the dataGrid changes.</p>
+<p>To mark a task complete the user will click on the checkbox for the task
+being completed. This will put a checkmark in the box (or clear it if it was
+already checked).</p>
+
+<!-- image of the date/time dialog box -->
+
+<p>To set (or reset) a scheduled completion date the user will bring up the
+pop-up menu as above, then select the completion date item.  This will bring
+up a dialog box that lets the user set the date. <b>This will be documented
+when the dialog box is completed</b></p>
+<p>To delete a task the user will bring up the pop-up menu as above, and
+select the delete option.  This will remove the task from the dataGrid.</p>
+<p>To return to the List of To Do Lists press the "Back" button and the 
+dataGrid is returned to display the list of To Do lists.</p>
+<h3>Misc</h3>
+<ul>
+<li>Lists belong to a user of the system (as identified in usersecurity).</li>
+<li>While renaming a list or task, the dataGrid is disabled.</li>
+</ul>

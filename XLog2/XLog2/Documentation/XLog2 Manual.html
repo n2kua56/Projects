@@ -1,0 +1,368 @@
+<html>
+<header>
+</header>
+<body>
+<h1>Contents</h1>
+<sl>
+<li><a href="#description">Description</a></li>
+<sl>
+<li><a href="first_use">First Use</a></li>
+<li><a href="keys">Keys</a></li>
+</sl>
+<li><a href="preferences">Preferences</a></li>
+<sl>
+<li><a href="info_page">Info page</a></li>
+<li><a href="general_page">General Page</a></li>
+<li><a href="logs_page">Logs Page</a></li>
+</sl>
+<li><a href="hamlib">Hamlib</a></li>
+<sl>
+<li><a href="hamlib_preferences">Hamlib Preferences</a></li>
+<li><a href="testing_hamlib">Testing Hamlib</a></li>
+</sl>
+<li><a href="printing">Printing</a></li>
+<li><a href="qsl_labels">QSL Labels</a></li>
+</sl>
+<h1>Abstract</h1>
+<p>This manual described the use of xlog, an open source logbook 
+for amateur radio operators. It is available as html from the menu 
+(Help $\rightarrow$ Manual or Ctrl + h) or as pdf in the xlog data directory.</p>
+
+<h1 id="description">Description</h1>
+<sl>
+<li><a href="first_use">First Use</a></li>
+<li><a href="keys">Keys</a></li>
+</sl>
+<p>xlog is a logbook program for amateur radio operators, written 
+with the help of the GTK+ libraries. The main xlog window consists 
+of a button bar, QSO frame, and a browseable log. Logs will be saved 
+to a flat text file. You can create, open and close logs as you need 
+them. There is an optional scoring window available which keeps track 
+of the most important awards. A ``worked before'' window shows QSO's 
+with the same station you are logging. An optional keyer window interfaces 
+to cwdaemon and is useful for contesting.</p>
+<h2 id="first_use">First Use</h2>
+<image src="newlog.png">
+<p>When xlog is first started, an empty window is shown. You must select 
+"Log $\rightarrow$ New" from the menu (Ctrl+N) to create a new log. QSO's 
+are entered into the QSO frame on the left of the main window. Clicking 
+the Date button will update the date field, the UTC button will update 
+the UTC field.</p>
+<image src="mainXlog2Window.jpg">
+<p>After all the fields are entered, click on Add in the button bar, to add 
+the QSO to the log list on the right side of the main window. QSO's can be 
+deleted from the log by selecting a row in the log list and clicking on Delete. 
+Likewise, a log entry can be changed by selecting a row in the log, changing 
+the QSO in the QSO frame, and clicking on Update. Finally, selecting 
+"Edit $\rightarrow$ Clear All" from the menu will Clear all the fields in the 
+QSO frame.</p>
+<h2 id="keys">Keys</h2>
+<p>All of the above commands are available as shortcuts. For a list of keys 
+used by xlog (in the English language) see the "Keys" window from the help 
+menu (Ctrl+z). Most of the buttons in the QSO frame can be clicked using the 
+Alt key together with the associated underlined character in the button. If 
+any of the labels are underlined the entry next to it will get focus when the 
+Alt key is used, when a default is present it will be filled in. You can access 
+the menu with Ctrl-F10. You need to make sure that your window manager does not 
+use Ctrl-F10, e.g. it is used by xfce to access the 10th desktop.</p>
+
+<h1 id="preferences">Preferences</h1>
+<sl>
+<li><a href="info_page">Info page</a></li>
+<li><a href="general_page">General Page</a></li>
+<li><a href="logs_page">Logs Page</a></li>
+</sl>
+<p>xlog stores and recalls several settings in xml format in the file $HOME / preferences.xml. 
+To change these, select "Settings $\rightarrow$ Preferences" from the menu. You will 
+see 4 different pages.</p>
+<h2 id="info_page">Info page</h2>
+<p>In order to calculate the correct distance to your location, you have to 
+enter your longitude and latitude in the Info page. Here you can also choose 
+whether the distance should be displayed in Kilometers or Nautical Miles.</p>
+<image src="InfoPage.jpg"?>
+<p>When you intend to make VHF/UHF QSO's and you have a QRA locator field in 
+the log, you should also enter your QRA locator here.</p>
+<h2 id="general_page">General Page</h2>
+<p>This page allows you to choose an editbox to enter band and mode instead 
+of using the default optionmenu. This is especially useful when using hamlib, 
+so the extra digits of your frequency can be filled in. When "use free fields 
+to add distance and azimuth to the log" is checked, distance and azimuth will 
+be calculated from the locator field (when present) and added to the log.<p>
+<image src="GeneralPage.jpg">
+<p>When 'Enable type and find' is checked, all the logs will be searched for 
+a callsign match and when found, fill in name, QTH, locator and remarks like 
+in the previous QSO.</p>
+<h2 id="logs_page">Logs Page</h2>
+<p>In the Logs page you can decide where to save your logs and which logs to 
+load at startup (in case there are no logs entered at the command line). Of 
+course, you have to restart xlog and be sure to move your logs there. You can 
+use wildcards or a list of logs separated by a comma. Extension .xlog will be 
+automatically added, e.g. when using wildcards, 'p*' will load all logs starting 
+with 'p' and ending with '.xlog'.</p>
+
+<h1 id="hamlib">Hamlib</h1>
+<sl>
+<li><a href="hamlib_preferences">Hamlib Preferences</a></li>
+<li><a href="testing_hamlib">Testing Hamlib</a></li>
+</sl>
+<p>Xlog is compiled with hamlib support, so you can read your rig's frequency, 
+mode, power and S-meter over the serial port.</p>
+<h2 id="hamlib_preferences">Hamlib Preferences</h2>
+<p>You must select the model of your rig and the port used from the list 
+available in the hamlib page of the preferences dialog. If you want to use RPC 
+rig, you should select localhost as a port. The same page allows you to display 
+a dockable frequency meter and s-meter on the statusbar.</p>
+<p><b>This may never be implemented</b></p>
+<p>image</p>
+<p>When hamlib is enabled, 3 clickable buttons are added to the QSO frame, so 
+you can easily fill in frequency, mode and signal strength in the appropriate 
+fields. If your log records power (required in some countries), there is also 
+a clickable power button in the QSO frame. You can either chose to poll your rig 
+continuously with a certain time interval or just retrieve rig data when using 
+"Edit $\rightarrow$ Click All" or Ctrl-k. Your hamlib port can be configured in 
+the hamlib page of the preferences dialog. You can enter things like: 
+rts_state=ON,timeout=600,serial_speed=19200 here.</p>
+<h2 id="testing_hamlib">Testing Hamlib</h2>
+At his point you should probably read your rig's manual, to see how you should hook up your rig to the serial port. For my kenwood rig, I need a standard serial cable with two 9-pin connectors. You also need write permission to the serial port. On my system, this means I need to add myself to the dialout group, with a command like:
+$ adduser 'username' dialout
+Next, you can test hamlib with rigctl, a binary distributed with hamlib. See which rigs are supported:
+
+$ rigctl -list
+Then start rigctl with your model number, e.g. '210' for a kenwood TS-870S, hooked up to COM2:
+
+$ rigctl -r /dev/ttyS1 -m 210
+Now you can check out if mode, PTT, frequency, signal strength and power (all used by xlog) are retrieved. At the 'Rig command:' prompt, type:
+
+f
+: retrieve frequency
+m
+: retrieve mode
+t
+: retrieve PTT (TX/RX mode)
+l
+and 'STRENGTH': retrieve signal strength (-54=S0 and 0=S9)
+l
+and 'RFPOWER': retrieve rig power (0.39 = 100 Watts)
+The hamlib FAQ at http://hamlib.sf.net/faq.html gives some answers to common problems. You could also ask around on the hamlib mailing list, see: http://lists.sourceforge.net/lists/listinfo/hamlib-developer.
+
+<h1 id="printing">Printing</h1>
+<p>You can either print a range or the whole log and you can choose which 
+columns are in the output. Printing can be done in 2 styles: landscape with 
+30 QSO's per page and portrait with 50 QSO's per page. The loglines will be 
+evenly distributed across the paper. You need to make sure the log fits the 
+paperwidth by either selecting the correct font or style.</p>
+<p>image</p>
+<p>The generated postscript file is sent to the default printer. If you are 
+using gnome and cups, there is a little application called gnome-cups-manager 
+for configuring printers. I case you are using lpd or lprng, you need to make 
+sure there is an entry called 'lp' in /etc/printcap. In case printing fails, 
+you can also print to a file. The file generated is log.ps in $HOME/.xlog.</p>
+<p>For contest logs, you can enable 2 empty columns called 'Multiplier' and 
+'Points' for calculating your score. If you choose the portrait style it is 
+advisable to disable the 'QSL Out', 'QSL In' and 'Remarks' columns. Otherwise 
+your log will not fit on the paper.</p>
+
+<h1 id="qsl_labels">QSL Labels</h1>
+<p>glabels is a gnome application for printing business cards and labels, see 
+http://snaught.com/glabels. It is designed to work with various laser/ink-jet 
+peel-off label and business card sheets that you'll find at most office supply 
+stores. The following works with a glabels version higher than 0.4.</p>
+<p>You can use the 'Save As' dialog for exporting the log to a type called 'TSV'. 
+This will save your log fields in a TAB separated file. The fields you want to
+export can be set in the "Save As" page of the ``Settings $\rightarrow$ Dialogs 
+and Windows`` dialog. The exported file can be imported into glabels using the 
+template called qsllabels.glabels in /usr/[local/]share/xlog.</p>
+<sl>
+<li>Start glabels</li>
+<li>Open qsllabels.glabels</li>
+<li>Select 'Merge properties' from the Tools menu</li>
+<li>Point 'location' to the exported labels file</li>
+<li>Don't change any of the Custom field keys, just click 'OK'</li>
+<li>You are now ready to print</li>
+</sl>
+<p>You should customize the label sheet by using "Edit $\rightarrow$ Select All" 
+from the menu, click on 'New', select the apropriate sheet from the pulldown menu, 
+use "Edit $\rightarrow$ Paste" to copy the fields into the new sheet and move them 
+around with your mouse until the fit on the label. Save this file to use as a 
+template for your QSL labels.</p>
+
+<h1>Log-Editor</h1>
+<p>The log-editor, when selected from the tools menu, can be used to display or 
+hide a number of columns in the log. 2 columns allow free entry, they can be 
+given any name. Changes to the log columns will be committed once you save the 
+log.</p>
+<image src="LogEditor.jpg">
+<pPlease note that it maybe desirable to select a common name for a free column 
+when using ADIF export as described in the ADIF specifications at 
+http://www.hosenose.com/adif/adif.html, section 3: Field Definitions.</p>
+<p>The log-editor can also be used to set the columnwidth of the log. You 
+should enter a number higher than 20. Changes to the column width will apply 
+to all the logs that are currently open. Only the number column allows a zero 
+width, you can use it to hide this column.</p>
+
+<h1 id="dupe_checking">Dupe Checking</h1>
+<p>A log can be checked for dupes from the tools menu. There are some 
+restrictions on the frequency field when used in dupe checking. It should 
+either contain a 'dot' after the MHz number or contain 3, 6 or 9 numbers 
+after the Mhz number.</p>
+<p>image</p>
+<p>When using hamlib, the total amount of numbers in the frequency field 
+can be selected in the hamlib page of the preferences dialog.</p>
+
+<h1 id="log_sorting">Log Sorting</h1>
+<p>If you select "Tools$\rightarrow$Sort by Date", your log will be sorted 
+by date and time. Log sorting assumes that the whole log is created with 
+the same locale. Also, the log date should have the format "dd mmm yyyy" 
+in your locale, e.g. "01 May 2004" in English, "01 mai 2004" in French, etc. 
+You can check the correct month name for your language settings by using the command:</p>
+<xmp>$ date -date='01 May'</xmp>
+<p>The time should be formatted as "HHMM", e.g. "1423". The sorted log will 
+be marked as changed. It is recommended to save the log under some other name, 
+so the original log will be safe. You should check this log for correct dates 
+and times before overwriting the original log. If the log is not correctly sorted, 
+start xlog from a terminal to see if sorting produces any errors.</p>
+
+<h1 id="defaults">Defaults</h1>
+<p>"Settings $\rightarrow$ Default" will show a dialog where you can fill in 
+default values for logging. These values will be used when selecting "Edit 
+$\rightarrow$ Click All" from the menu.</p>
+<image src="defaults.jpg">
+<h1 id="worked_before">Worked Before</h1>
+<p>When you select Worked Before from the tools menu, a dialog will be displayed 
+which shows a sorted list of contacts while you are typing in the callsign entry. 
+This is especially useful in contests.</p>
+<p>image</p>
+<p>The number of columns shown in this dialog can be adjusted from the 
+"Settings $\rightarrow$ Dialogs and Windows" menu (first page).</p>
+
+<h1 id="scoring">Scoring</h1>
+<p>Xlog will keep track of your DXCC scoring and will display worked and confirmed 
+countries and DXCC information in a separate window, called the scoring window. The 
+top table of this window displays the number of times a country is worked or "0" if 
+confirmed. The bottom table shows the total number of DXCC countries.</p>
+<p>image</p>
+<p>Xlog can also keep track of WAC (Worked All Continents) scoring. You will have to 
+enable it in the Scoring page of the "Settings $\rightarrow$ Dialogs and Windows" 
+dialog. This will add an extra page to the scoring window.</p>
+<p>Xlog will look up the prefix of a callsign and display DXCC information together 
+with calculated distance and beam heading in the left frame. In a log where a QTH 
+locator field is present, distance and azimuth to the locator is calculated and 
+displayed in a separate frame.</p>
+<p>If DXCC lookup fails you can enter a valid country in the AWARDS column of the 
+log. The correct format for this string is 'DXCC-' followed by the desired prefix 
+(see ''Help $\rightarrow$ DXCC list`` from the menu). Likewise, continent lookups 
+can be corrected by adding a 'WAC-' string followed by the continent to the AWARDS 
+columns. Valid continent names are AS, AF, OC, NA, SA and EU.</p>
+
+<h1 id="keyer_window">Keyer Window</h1>
+<p>The keyer window, available under the Tools Menu, is in fact a simple 
+(contesting) interface for cwdaemon. You can program all of your function keys with 
+CW messages and control your speed here. Clicking the stop button or using the 'ESC' 
+key will abort any messages. You can also see a counter for serial numbers, a toggle 
+box for short serial numbers and a menu for selecting either CQ or "Search & Pound" 
+mode.</p>
+<p>image</p>
+<p>The bottom text entry can be used to typecharacters. The function key entries can 
+use the following macros:</p>
+<dl>
+<dt>%</dt><dd>my callsign</dd>
+<dt>@</dt><dd>his callsign</dd>
+<dt>#</dt><dd>number counter</dd>
+</dl>
+<p>The number counter will auto-increment. The defaults dialog can be used to fill 
+in default reports for a contest, the # macro can be used in the TX(RST) field of 
+this dialog.</p>
+<h2 id="cq_mode">Running a contest in CQ mode</h2>
+<sl>
+<li>cursor on the callsign field</li>
+<li>enter on an empty callsign field will call F1: "CQ de N2KUA N2KUA test"</li>
+<li>enter the callsign you hear and hit enter</li>
+<li>F3 will send "N2KUA 5nnttt1"</li>
+<li>exchange entries will be filled in from the defaults dialog</li>
+<li>xlog will jump to the end of the exchange field RX(RST)</li>
+<li>enter the exchange number you hear and hit enter</li> 
+<li>xlog will complete the date, time and frequency entries</li>
+<li>the CQTU entry will now be sent: "tu PG4I test"</li>
+<li>use ctl-a to log the QSO</li>
+<li>the counter will be incremented</li>
+<li>all fields will be cleared and xlog will jump to the callsign field</li>
+</sl>
+<h2 id="sandp_mode">Running a contest IN S&P mode</h2>
+<sl>
+<li>cursor on the callsign field</li>
+<li>enter the callsign you here and hit enter</li> 
+<li>F6 will be sent: "PG4I"</li>
+<li>exchange entries will be filled in from the defaults dialog</li>
+<li>xlog will jump to the end of the exchange field RX(RST)</li> 
+<li>fill in the exchange and hit enter</li> 
+<li>S&PTU will be sent: "TU 5nntt1"</li>
+<li>use ctl-a to log the QSO</li>
+<li>the counter will be incremented</li>
+<li>all fields will be cleared and xlog will jump to the callsign field</li>
+</sl>
+
+<h1 id="data_exchange>Data Exchange">Data Exchange</h1>
+<p>xlog can exchange data with twpsk (version 2.0 and higher) by WA0EIR. When 
+a callsign is entered, it will show up in twpsk's send widget (where you type 
+your text) when hitting Shift+Alt+h. Shift+Alt+o will show 'hiscall de mycall'.</p>
+<dl>
+<dt>gmfsk</dt><dd>can send logging data to xlog, when clicking on the 'Log entry' button.</dd>
+<dt>Marote</dt><dd>a rig control program for the elecraft K2 by AB6CV does the 
+same when clicking on the 'Log QSO' button.</dd>
+<dt>gpsk31</dt><dd>can exchange log information when the QSO details dialog is open.</dd>
+<dt>ktrack</dt><dd>can exchange satellite information with xlog. In order to do 
+so, you need to enable the 2 free fields with the log-editor. Next, select 'add 
+data to QSO frame' in the last page of the preferences dialog.</dd>
+</dl>
+
+<h1 id="import_export">Importing and Exporting Logs</h1>
+<p>xlog supports ADIF, Cabrillo, EDI (VHF and higher contest format recommended 
+by IARU region 1), editest, OH1AA, Trlog (tlf) and twlog import. Logs can be 
+exported to ADIF, Cabrillo and EDI. The apropriate option menu should be 
+selected for the file type when importing or exporting a log.</p>
+<p>image</p>
+<p>Please check your log before importing it and make sure it has the right 
+log format. The "Log $\rightarrow$ Import" dialog adds a preview widget which 
+reads the first 10 lines of your log, so you can check it.<p>
+<h2 id="edi">EDI</h2>
+<p>When using EDI export, you should have enabled the locator field in the log. 
+Xlog will automatically calculate the distance and add it to the log. When 
+using ADIF export you can decide to convert frequency to band. Please use the 
+"Save As" page of the "Settings $\rightarrow$ Dialogs and Windows" dialog to 
+set this.</p>
+<h2 id="tsv">TSV</h2>
+<p>The TSV (Tab Separated Value) export format is used by glabels (see the 
+chapter on QSL labels), but this can also be used as a way to import log data 
+into a spreadsheet. You can also use the "Save As" page of the 
+"Settings $\rightarrow$ Dialogs and Windows" dialog to define the fields to export.</p>
+<h2 id="cabrillo">Cabrillo</h2>
+<p>The Cabrillo log format is the defacto standard format for log submission in 
+many contests. It's aim is to be ``an interface between logging program authors 
+and contest sponsors.'' As such, the information in the file is generally limited 
+with respect to day-to-day logging of contacts.</p>
+<p>Xlog will import from and export to Cabrillo 2.0 files using the QSO template 
+for DARC Worked All Europe. This format is very similar to, and in most cases 
+should work for the QSO template for other ARRL and CQ contests, Stew Perry contest, 
+Oceania DX Contest and AP Sprint.</p>
+<xmp>
+                              --------info sent------- -------info rcvd--------
+QSO: freq  mo date       time call          rst exch   call          rst exch  
+QSO: ***** ** yyyy-mm-dd nnnn ************* nnn ****** ************* nnn ******
+QSO:  3799 PH 2003-03-23 0711 YB1AQS        59  700    DL8WPX        59  001   
+0000000001111111111222222222233333333334444444444555555555566666666667777777777
+1234567890123456789012345678901234567890123456789012345678901234567890123456789
+</xmp>
+<p>Xlog will additionally attempt to import QSOs from Cabrillo files claiming to 
+be for the Sweepstakes, NAQP and NA Sprint contests by matching the CONTEST tag 
+and adjusting it's input parsing accordingly.</p>
+<p>Xlog does not have contest specific exchange fields, instead the exchange data 
+should go in the RST field. On export the data after the RS or RST is split out 
+for the exchange field of the Cabrillo file. On import the extra exchange data is 
+joined with the RST into Xlog's TX and RX RST fields.</p>
+<p>See also:</p>
+
+http://www.kkn.net/~trey/cabrillo
+logfile/cabrillo.c
+
+</body>
+</html>

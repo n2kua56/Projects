@@ -1,0 +1,129 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EZDesk", "EZDesk\EZDesk.csproj", "{9D8D4B5F-78E9-4147-9E7C-EAA0528E8058}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EZDeskTest", "EZDeskTest\EZDeskTest.csproj", "{5B0EFFA8-CE10-43C8-88AD-1156FC0DA0FE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0EEC3179-CADA-4A50-B40E-4B78E7FA07B7}"
+	ProjectSection(SolutionItems) = preProject
+		EZDesk.vsmdi = EZDesk.vsmdi
+		Local.testsettings = Local.testsettings
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToDo", "ToDo\ToDo.csproj", "{ECFC09E8-9CAA-490E-A1FB-81A7B63FF084}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EZUtils", "EZUtils\EZUtils.csproj", "{2C5FED19-8EC6-4E84-945B-CE443D6748ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EZDeskDataLayer", "Datalayer\EZDeskDataLayer.csproj", "{26C664AE-3A39-4203-9222-ACBFB3F7547E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calendar.NET", "Calendar.NET\Calendar.NET.csproj", "{6CBC43B6-E950-49B2-B14A-563C50FCD5C3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9D8D4B5F-78E9-4147-9E7C-EAA0528E8058}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{9D8D4B5F-78E9-4147-9E7C-EAA0528E8058}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{9D8D4B5F-78E9-4147-9E7C-EAA0528E8058}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{9D8D4B5F-78E9-4147-9E7C-EAA0528E8058}.Debug|x86.ActiveCfg = Debug|x86
+		{9D8D4B5F-78E9-4147-9E7C-EAA0528E8058}.Debug|x86.Build.0 = Debug|x86
+		{9D8D4B5F-78E9-4147-9E7C-EAA0528E8058}.Release|Any CPU.ActiveCfg = Release|x86
+		{9D8D4B5F-78E9-4147-9E7C-EAA0528E8058}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{9D8D4B5F-78E9-4147-9E7C-EAA0528E8058}.Release|Mixed Platforms.Build.0 = Release|x86
+		{9D8D4B5F-78E9-4147-9E7C-EAA0528E8058}.Release|x86.ActiveCfg = Release|x86
+		{9D8D4B5F-78E9-4147-9E7C-EAA0528E8058}.Release|x86.Build.0 = Release|x86
+		{5B0EFFA8-CE10-43C8-88AD-1156FC0DA0FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B0EFFA8-CE10-43C8-88AD-1156FC0DA0FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B0EFFA8-CE10-43C8-88AD-1156FC0DA0FE}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{5B0EFFA8-CE10-43C8-88AD-1156FC0DA0FE}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{5B0EFFA8-CE10-43C8-88AD-1156FC0DA0FE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5B0EFFA8-CE10-43C8-88AD-1156FC0DA0FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B0EFFA8-CE10-43C8-88AD-1156FC0DA0FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B0EFFA8-CE10-43C8-88AD-1156FC0DA0FE}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{5B0EFFA8-CE10-43C8-88AD-1156FC0DA0FE}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{5B0EFFA8-CE10-43C8-88AD-1156FC0DA0FE}.Release|x86.ActiveCfg = Release|Any CPU
+		{ECFC09E8-9CAA-490E-A1FB-81A7B63FF084}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{ECFC09E8-9CAA-490E-A1FB-81A7B63FF084}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{ECFC09E8-9CAA-490E-A1FB-81A7B63FF084}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{ECFC09E8-9CAA-490E-A1FB-81A7B63FF084}.Debug|x86.ActiveCfg = Debug|x86
+		{ECFC09E8-9CAA-490E-A1FB-81A7B63FF084}.Debug|x86.Build.0 = Debug|x86
+		{ECFC09E8-9CAA-490E-A1FB-81A7B63FF084}.Release|Any CPU.ActiveCfg = Release|x86
+		{ECFC09E8-9CAA-490E-A1FB-81A7B63FF084}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{ECFC09E8-9CAA-490E-A1FB-81A7B63FF084}.Release|Mixed Platforms.Build.0 = Release|x86
+		{ECFC09E8-9CAA-490E-A1FB-81A7B63FF084}.Release|x86.ActiveCfg = Release|x86
+		{ECFC09E8-9CAA-490E-A1FB-81A7B63FF084}.Release|x86.Build.0 = Release|x86
+		{2C5FED19-8EC6-4E84-945B-CE443D6748ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C5FED19-8EC6-4E84-945B-CE443D6748ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C5FED19-8EC6-4E84-945B-CE443D6748ED}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{2C5FED19-8EC6-4E84-945B-CE443D6748ED}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{2C5FED19-8EC6-4E84-945B-CE443D6748ED}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2C5FED19-8EC6-4E84-945B-CE443D6748ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C5FED19-8EC6-4E84-945B-CE443D6748ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C5FED19-8EC6-4E84-945B-CE443D6748ED}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{2C5FED19-8EC6-4E84-945B-CE443D6748ED}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{2C5FED19-8EC6-4E84-945B-CE443D6748ED}.Release|x86.ActiveCfg = Release|Any CPU
+		{26C664AE-3A39-4203-9222-ACBFB3F7547E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26C664AE-3A39-4203-9222-ACBFB3F7547E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26C664AE-3A39-4203-9222-ACBFB3F7547E}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{26C664AE-3A39-4203-9222-ACBFB3F7547E}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{26C664AE-3A39-4203-9222-ACBFB3F7547E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{26C664AE-3A39-4203-9222-ACBFB3F7547E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26C664AE-3A39-4203-9222-ACBFB3F7547E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26C664AE-3A39-4203-9222-ACBFB3F7547E}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{26C664AE-3A39-4203-9222-ACBFB3F7547E}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{26C664AE-3A39-4203-9222-ACBFB3F7547E}.Release|x86.ActiveCfg = Release|Any CPU
+		{6CBC43B6-E950-49B2-B14A-563C50FCD5C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CBC43B6-E950-49B2-B14A-563C50FCD5C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CBC43B6-E950-49B2-B14A-563C50FCD5C3}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{6CBC43B6-E950-49B2-B14A-563C50FCD5C3}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{6CBC43B6-E950-49B2-B14A-563C50FCD5C3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6CBC43B6-E950-49B2-B14A-563C50FCD5C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CBC43B6-E950-49B2-B14A-563C50FCD5C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CBC43B6-E950-49B2-B14A-563C50FCD5C3}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{6CBC43B6-E950-49B2-B14A-563C50FCD5C3}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{6CBC43B6-E950-49B2-B14A-563C50FCD5C3}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		VisualSVNWorkingCopyRoot = .
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://n2kua56.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Calendar.NET\\Calendar.NET.csproj
+		SccProjectName1 = Calendar.NET
+		SccLocalPath1 = Calendar.NET
+		SccProjectUniqueName2 = Datalayer\\EZDeskDataLayer.csproj
+		SccProjectName2 = Datalayer
+		SccLocalPath2 = Datalayer
+		SccProjectUniqueName3 = EZDesk\\EZDesk.csproj
+		SccProjectName3 = EZDesk
+		SccLocalPath3 = EZDesk
+		SccProjectUniqueName4 = EZDeskTest\\EZDeskTest.csproj
+		SccProjectName4 = EZDeskTest
+		SccLocalPath4 = EZDeskTest
+		SccProjectUniqueName5 = EZUtils\\EZUtils.csproj
+		SccProjectName5 = EZUtils
+		SccLocalPath5 = EZUtils
+		SccProjectUniqueName6 = ToDo\\ToDo.csproj
+		SccProjectName6 = ToDo
+		SccLocalPath6 = ToDo
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = EZDesk.vsmdi
+	EndGlobalSection
+EndGlobal

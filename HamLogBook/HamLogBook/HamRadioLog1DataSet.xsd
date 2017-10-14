@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="HamRadioLog1DataSet" targetNamespace="http://tempuri.org/HamRadioLog1DataSet.xsd" xmlns:mstns="http://tempuri.org/HamRadioLog1DataSet.xsd" xmlns="http://tempuri.org/HamRadioLog1DataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="HamRadioLog1ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="HamRadioLog1ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.HamLogBook.Properties.Settings.GlobalReference.Default.HamRadioLog1ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="HamRadioLog1DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="HamRadioLog1DataSet" msprop:Generator_UserDSName="HamRadioLog1DataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tblContacts" msprop:Generator_TableClassName="tblContactsDataTable" msprop:Generator_TableVarName="tabletblContacts" msprop:Generator_TablePropName="tblContacts" msprop:Generator_RowDeletingName="tblContactsRowDeleting" msprop:Generator_RowChangingName="tblContactsRowChanging" msprop:Generator_RowEvHandlerName="tblContactsRowChangeEventHandler" msprop:Generator_RowDeletedName="tblContactsRowDeleted" msprop:Generator_UserTableName="tblContacts" msprop:Generator_RowChangedName="tblContactsRowChanged" msprop:Generator_RowEvArgName="tblContactsRowChangeEvent" msprop:Generator_RowClassName="tblContactsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="fldIdx" msprop:Generator_ColumnVarNameInTable="columnfldIdx" msprop:Generator_ColumnPropNameInRow="fldIdx" msprop:Generator_ColumnPropNameInTable="fldIdxColumn" msprop:Generator_UserColumnName="fldIdx" type="xs:string" />
+              <xs:element name="fldContactNo" msprop:Generator_ColumnVarNameInTable="columnfldContactNo" msprop:Generator_ColumnPropNameInRow="fldContactNo" msprop:Generator_ColumnPropNameInTable="fldContactNoColumn" msprop:Generator_UserColumnName="fldContactNo" type="xs:string" minOccurs="0" />
+              <xs:element name="fldAge" msprop:Generator_ColumnVarNameInTable="columnfldAge" msprop:Generator_ColumnPropNameInRow="fldAge" msprop:Generator_ColumnPropNameInTable="fldAgeColumn" msprop:Generator_UserColumnName="fldAge" type="xs:string" minOccurs="0" />
+              <xs:element name="fldARCI" msprop:Generator_ColumnVarNameInTable="columnfldARCI" msprop:Generator_ColumnPropNameInRow="fldARCI" msprop:Generator_ColumnPropNameInTable="fldARCIColumn" msprop:Generator_UserColumnName="fldARCI" type="xs:string" minOccurs="0" />
+              <xs:element name="fldBand" msprop:Generator_ColumnVarNameInTable="columnfldBand" msprop:Generator_ColumnPropNameInRow="fldBand" msprop:Generator_ColumnPropNameInTable="fldBandColumn" msprop:Generator_UserColumnName="fldBand" type="xs:string" minOccurs="0" />
+              <xs:element name="fldCall" msprop:Generator_ColumnVarNameInTable="columnfldCall" msprop:Generator_ColumnPropNameInRow="fldCall" msprop:Generator_ColumnPropNameInTable="fldCallColumn" msprop:Generator_UserColumnName="fldCall" type="xs:string" minOccurs="0" />
+              <xs:element name="fldCategory" msprop:Generator_ColumnVarNameInTable="columnfldCategory" msprop:Generator_ColumnPropNameInRow="fldCategory" msprop:Generator_ColumnPropNameInTable="fldCategoryColumn" msprop:Generator_UserColumnName="fldCategory" type="xs:string" minOccurs="0" />
+              <xs:element name="fldCheck" msprop:Generator_ColumnVarNameInTable="columnfldCheck" msprop:Generator_ColumnPropNameInRow="fldCheck" msprop:Generator_ColumnPropNameInTable="fldCheckColumn" msprop:Generator_UserColumnName="fldCheck" type="xs:string" minOccurs="0" />
+              <xs:element name="fldClass" msprop:Generator_ColumnVarNameInTable="columnfldClass" msprop:Generator_ColumnPropNameInRow="fldClass" msprop:Generator_ColumnPropNameInTable="fldClassColumn" msprop:Generator_UserColumnName="fldClass" type="xs:string" minOccurs="0" />
+              <xs:element name="fldComments" msprop:Generator_ColumnVarNameInTable="columnfldComments" msprop:Generator_ColumnPropNameInRow="fldComments" msprop:Generator_ColumnPropNameInTable="fldCommentsColumn" msprop:Generator_UserColumnName="fldComments" type="xs:string" minOccurs="0" />
+              <xs:element name="fldComputerName" msprop:Generator_ColumnVarNameInTable="columnfldComputerName" msprop:Generator_ColumnPropNameInRow="fldComputerName" msprop:Generator_ColumnPropNameInTable="fldComputerNameColumn" msprop:Generator_UserColumnName="fldComputerName" type="xs:string" minOccurs="0" />
+              <xs:element name="fldContestID" msprop:Generator_ColumnVarNameInTable="columnfldContestID" msprop:Generator_ColumnPropNameInRow="fldContestID" msprop:Generator_ColumnPropNameInTable="fldContestIDColumn" msprop:Generator_UserColumnName="fldContestID" type="xs:string" minOccurs="0" />
+              <xs:element name="fldContinent" msprop:Generator_ColumnVarNameInTable="columnfldContinent" msprop:Generator_ColumnPropNameInRow="fldContinent" msprop:Generator_ColumnPropNameInTable="fldContinentColumn" msprop:Generator_UserColumnName="fldContinent" type="xs:string" minOccurs="0" />
+              <xs:element name="fldCountryDXCC" msprop:Generator_ColumnVarNameInTable="columnfldCountryDXCC" msprop:Generator_ColumnPropNameInRow="fldCountryDXCC" msprop:Generator_ColumnPropNameInTable="fldCountryDXCCColumn" msprop:Generator_UserColumnName="fldCountryDXCC" type="xs:string" minOccurs="0" />
+              <xs:element name="fldCountryWorked" msprop:Generator_ColumnVarNameInTable="columnfldCountryWorked" msprop:Generator_ColumnPropNameInRow="fldCountryWorked" msprop:Generator_ColumnPropNameInTable="fldCountryWorkedColumn" msprop:Generator_UserColumnName="fldCountryWorked" type="xs:string" minOccurs="0" />
+              <xs:element name="fldCountyR" msprop:Generator_ColumnVarNameInTable="columnfldCountyR" msprop:Generator_ColumnPropNameInRow="fldCountyR" msprop:Generator_ColumnPropNameInTable="fldCountyRColumn" msprop:Generator_UserColumnName="fldCountyR" type="xs:string" minOccurs="0" />
+              <xs:element name="fldCountyS" msprop:Generator_ColumnVarNameInTable="columnfldCountyS" msprop:Generator_ColumnPropNameInRow="fldCountyS" msprop:Generator_ColumnPropNameInTable="fldCountySColumn" msprop:Generator_UserColumnName="fldCountyS" type="xs:string" minOccurs="0" />
+              <xs:element name="fldCQZone" msprop:Generator_ColumnVarNameInTable="columnfldCQZone" msprop:Generator_ColumnPropNameInRow="fldCQZone" msprop:Generator_ColumnPropNameInTable="fldCQZoneColumn" msprop:Generator_UserColumnName="fldCQZone" type="xs:string" minOccurs="0" />
+              <xs:element name="fldDateStr" msprop:Generator_ColumnVarNameInTable="columnfldDateStr" msprop:Generator_ColumnPropNameInRow="fldDateStr" msprop:Generator_ColumnPropNameInTable="fldDateStrColumn" msprop:Generator_UserColumnName="fldDateStr" type="xs:string" minOccurs="0" />
+              <xs:element name="fldFists" msprop:Generator_ColumnVarNameInTable="columnfldFists" msprop:Generator_ColumnPropNameInRow="fldFists" msprop:Generator_ColumnPropNameInTable="fldFistsColumn" msprop:Generator_UserColumnName="fldFists" type="xs:string" minOccurs="0" />
+              <xs:element name="fldFrequency" msprop:Generator_ColumnVarNameInTable="columnfldFrequency" msprop:Generator_ColumnPropNameInRow="fldFrequency" msprop:Generator_ColumnPropNameInTable="fldFrequencyColumn" msprop:Generator_UserColumnName="fldFrequency" type="xs:string" minOccurs="0" />
+              <xs:element name="fldFuture1" msprop:Generator_ColumnVarNameInTable="columnfldFuture1" msprop:Generator_ColumnPropNameInRow="fldFuture1" msprop:Generator_ColumnPropNameInTable="fldFuture1Column" msprop:Generator_UserColumnName="fldFuture1" type="xs:string" minOccurs="0" />
+              <xs:element name="fldFuture2" msprop:Generator_ColumnVarNameInTable="columnfldFuture2" msprop:Generator_ColumnPropNameInRow="fldFuture2" msprop:Generator_ColumnPropNameInTable="fldFuture2Column" msprop:Generator_UserColumnName="fldFuture2" type="xs:string" minOccurs="0" />
+              <xs:element name="fldGridR" msprop:Generator_ColumnVarNameInTable="columnfldGridR" msprop:Generator_ColumnPropNameInRow="fldGridR" msprop:Generator_ColumnPropNameInTable="fldGridRColumn" msprop:Generator_UserColumnName="fldGridR" type="xs:string" minOccurs="0" />
+              <xs:element name="fldGridS" msprop:Generator_ColumnVarNameInTable="columnfldGridS" msprop:Generator_ColumnPropNameInRow="fldGridS" msprop:Generator_ColumnPropNameInTable="fldGridSColumn" msprop:Generator_UserColumnName="fldGridS" type="xs:string" minOccurs="0" />
+              <xs:element name="fldARUZone" msprop:Generator_ColumnVarNameInTable="columnfldARUZone" msprop:Generator_ColumnPropNameInRow="fldARUZone" msprop:Generator_ColumnPropNameInTable="fldARUZoneColumn" msprop:Generator_UserColumnName="fldARUZone" type="xs:string" minOccurs="0" />
+              <xs:element name="fldInitials" msprop:Generator_ColumnVarNameInTable="columnfldInitials" msprop:Generator_ColumnPropNameInRow="fldInitials" msprop:Generator_ColumnPropNameInTable="fldInitialsColumn" msprop:Generator_UserColumnName="fldInitials" type="xs:string" minOccurs="0" />
+              <xs:element name="fldIOTA" msprop:Generator_ColumnVarNameInTable="columnfldIOTA" msprop:Generator_ColumnPropNameInRow="fldIOTA" msprop:Generator_ColumnPropNameInTable="fldIOTAColumn" msprop:Generator_UserColumnName="fldIOTA" type="xs:string" minOccurs="0" />
+              <xs:element name="fldITUZone" msprop:Generator_ColumnVarNameInTable="columnfldITUZone" msprop:Generator_ColumnPropNameInRow="fldITUZone" msprop:Generator_ColumnPropNameInTable="fldITUZoneColumn" msprop:Generator_UserColumnName="fldITUZone" type="xs:string" minOccurs="0" />
+              <xs:element name="fldLightHouse" msprop:Generator_ColumnVarNameInTable="columnfldLightHouse" msprop:Generator_ColumnPropNameInRow="fldLightHouse" msprop:Generator_ColumnPropNameInTable="fldLightHouseColumn" msprop:Generator_UserColumnName="fldLightHouse" type="xs:string" minOccurs="0" />
+              <xs:element name="fldMode" msprop:Generator_ColumnVarNameInTable="columnfldMode" msprop:Generator_ColumnPropNameInRow="fldMode" msprop:Generator_ColumnPropNameInTable="fldModeColumn" msprop:Generator_UserColumnName="fldMode" type="xs:string" minOccurs="0" />
+              <xs:element name="fldModeContest" msprop:Generator_ColumnVarNameInTable="columnfldModeContest" msprop:Generator_ColumnPropNameInRow="fldModeContest" msprop:Generator_ColumnPropNameInTable="fldModeContestColumn" msprop:Generator_UserColumnName="fldModeContest" type="xs:string" minOccurs="0" />
+              <xs:element name="fldNameR" msprop:Generator_ColumnVarNameInTable="columnfldNameR" msprop:Generator_ColumnPropNameInRow="fldNameR" msprop:Generator_ColumnPropNameInTable="fldNameRColumn" msprop:Generator_UserColumnName="fldNameR" type="xs:string" minOccurs="0" />
+              <xs:element name="fldNameS" msprop:Generator_ColumnVarNameInTable="columnfldNameS" msprop:Generator_ColumnPropNameInRow="fldNameS" msprop:Generator_ColumnPropNameInTable="fldNameSColumn" msprop:Generator_UserColumnName="fldNameS" type="xs:string" minOccurs="0" />
+              <xs:element name="fldOperator" msprop:Generator_ColumnVarNameInTable="columnfldOperator" msprop:Generator_ColumnPropNameInRow="fldOperator" msprop:Generator_ColumnPropNameInTable="fldOperatorColumn" msprop:Generator_UserColumnName="fldOperator" type="xs:string" minOccurs="0" />
+              <xs:element name="fldOther1" msprop:Generator_ColumnVarNameInTable="columnfldOther1" msprop:Generator_ColumnPropNameInRow="fldOther1" msprop:Generator_ColumnPropNameInTable="fldOther1Column" msprop:Generator_UserColumnName="fldOther1" type="xs:string" minOccurs="0" />
+              <xs:element name="fldOther2" msprop:Generator_ColumnVarNameInTable="columnfldOther2" msprop:Generator_ColumnPropNameInRow="fldOther2" msprop:Generator_ColumnPropNameInTable="fldOther2Column" msprop:Generator_UserColumnName="fldOther2" type="xs:string" minOccurs="0" />
+              <xs:element name="fldOther3" msprop:Generator_ColumnVarNameInTable="columnfldOther3" msprop:Generator_ColumnPropNameInRow="fldOther3" msprop:Generator_ColumnPropNameInTable="fldOther3Column" msprop:Generator_UserColumnName="fldOther3" type="xs:string" minOccurs="0" />
+              <xs:element name="fldOther4" msprop:Generator_ColumnVarNameInTable="columnfldOther4" msprop:Generator_ColumnPropNameInRow="fldOther4" msprop:Generator_ColumnPropNameInTable="fldOther4Column" msprop:Generator_UserColumnName="fldOther4" type="xs:string" minOccurs="0" />
+              <xs:element name="fldOther5" msprop:Generator_ColumnVarNameInTable="columnfldOther5" msprop:Generator_ColumnPropNameInRow="fldOther5" msprop:Generator_ColumnPropNameInTable="fldOther5Column" msprop:Generator_UserColumnName="fldOther5" type="xs:string" minOccurs="0" />
+              <xs:element name="fldOther6" msprop:Generator_ColumnVarNameInTable="columnfldOther6" msprop:Generator_ColumnPropNameInRow="fldOther6" msprop:Generator_ColumnPropNameInTable="fldOther6Column" msprop:Generator_UserColumnName="fldOther6" type="xs:string" minOccurs="0" />
+              <xs:element name="fldOther7" msprop:Generator_ColumnVarNameInTable="columnfldOther7" msprop:Generator_ColumnPropNameInRow="fldOther7" msprop:Generator_ColumnPropNameInTable="fldOther7Column" msprop:Generator_UserColumnName="fldOther7" type="xs:string" minOccurs="0" />
+              <xs:element name="fldOther8" msprop:Generator_ColumnVarNameInTable="columnfldOther8" msprop:Generator_ColumnPropNameInRow="fldOther8" msprop:Generator_ColumnPropNameInTable="fldOther8Column" msprop:Generator_UserColumnName="fldOther8" type="xs:string" minOccurs="0" />
+              <xs:element name="fldPoints" msprop:Generator_ColumnVarNameInTable="columnfldPoints" msprop:Generator_ColumnPropNameInRow="fldPoints" msprop:Generator_ColumnPropNameInTable="fldPointsColumn" msprop:Generator_UserColumnName="fldPoints" type="xs:string" minOccurs="0" />
+              <xs:element name="fldPower" msprop:Generator_ColumnVarNameInTable="columnfldPower" msprop:Generator_ColumnPropNameInRow="fldPower" msprop:Generator_ColumnPropNameInTable="fldPowerColumn" msprop:Generator_UserColumnName="fldPower" type="xs:string" minOccurs="0" />
+              <xs:element name="fldPrecedence" msprop:Generator_ColumnVarNameInTable="columnfldPrecedence" msprop:Generator_ColumnPropNameInRow="fldPrecedence" msprop:Generator_ColumnPropNameInTable="fldPrecedenceColumn" msprop:Generator_UserColumnName="fldPrecedence" type="xs:string" minOccurs="0" />
+              <xs:element name="fldPrefix" msprop:Generator_ColumnVarNameInTable="columnfldPrefix" msprop:Generator_ColumnPropNameInRow="fldPrefix" msprop:Generator_ColumnPropNameInTable="fldPrefixColumn" msprop:Generator_UserColumnName="fldPrefix" type="xs:string" minOccurs="0" />
+              <xs:element name="fldPropMode" msprop:Generator_ColumnVarNameInTable="columnfldPropMode" msprop:Generator_ColumnPropNameInRow="fldPropMode" msprop:Generator_ColumnPropNameInTable="fldPropModeColumn" msprop:Generator_UserColumnName="fldPropMode" type="xs:string" minOccurs="0" />
+              <xs:element name="fldQSLConfByR" msprop:Generator_ColumnVarNameInTable="columnfldQSLConfByR" msprop:Generator_ColumnPropNameInRow="fldQSLConfByR" msprop:Generator_ColumnPropNameInTable="fldQSLConfByRColumn" msprop:Generator_UserColumnName="fldQSLConfByR" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblQSLConf" msprop:Generator_TableClassName="tblQSLConfDataTable" msprop:Generator_TableVarName="tabletblQSLConf" msprop:Generator_TablePropName="tblQSLConf" msprop:Generator_RowDeletingName="tblQSLConfRowDeleting" msprop:Generator_RowChangingName="tblQSLConfRowChanging" msprop:Generator_RowEvHandlerName="tblQSLConfRowChangeEventHandler" msprop:Generator_RowDeletedName="tblQSLConfRowDeleted" msprop:Generator_UserTableName="tblQSLConf" msprop:Generator_RowChangedName="tblQSLConfRowChanged" msprop:Generator_RowEvArgName="tblQSLConfRowChangeEvent" msprop:Generator_RowClassName="tblQSLConfRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="index" msprop:Generator_ColumnVarNameInTable="columnindex" msprop:Generator_ColumnPropNameInRow="index" msprop:Generator_ColumnPropNameInTable="indexColumn" msprop:Generator_UserColumnName="index" type="xs:string" minOccurs="0" />
+              <xs:element name="CALL" msprop:Generator_ColumnVarNameInTable="columnCALL" msprop:Generator_ColumnPropNameInRow="CALL" msprop:Generator_ColumnPropNameInTable="CALLColumn" msprop:Generator_UserColumnName="CALL" type="xs:string" minOccurs="0" />
+              <xs:element name="ConfirmationId" msprop:Generator_ColumnVarNameInTable="columnConfirmationId" msprop:Generator_ColumnPropNameInRow="ConfirmationId" msprop:Generator_ColumnPropNameInTable="ConfirmationIdColumn" msprop:Generator_UserColumnName="ConfirmationId" type="xs:string" minOccurs="0" />
+              <xs:element name="ConfDate" msprop:Generator_ColumnVarNameInTable="columnConfDate" msprop:Generator_ColumnPropNameInRow="ConfDate" msprop:Generator_ColumnPropNameInTable="ConfDateColumn" msprop:Generator_UserColumnName="ConfDate" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tblConfirmationType" msprop:Generator_TableClassName="tblConfirmationTypeDataTable" msprop:Generator_TableVarName="tabletblConfirmationType" msprop:Generator_TablePropName="tblConfirmationType" msprop:Generator_RowDeletingName="tblConfirmationTypeRowDeleting" msprop:Generator_RowChangingName="tblConfirmationTypeRowChanging" msprop:Generator_RowEvHandlerName="tblConfirmationTypeRowChangeEventHandler" msprop:Generator_RowDeletedName="tblConfirmationTypeRowDeleted" msprop:Generator_UserTableName="tblConfirmationType" msprop:Generator_RowChangedName="tblConfirmationTypeRowChanged" msprop:Generator_RowEvArgName="tblConfirmationTypeRowChangeEvent" msprop:Generator_RowClassName="tblConfirmationTypeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:string" minOccurs="0" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:tblContacts" />
+      <xs:field xpath="mstns:fldIdx" />
+    </xs:unique>
+    <xs:unique name="tblQSLConfKey1">
+      <xs:selector xpath=".//mstns:tblQSLConf" />
+      <xs:field xpath="mstns:index" />
+    </xs:unique>
+    <xs:unique name="tblQSLConf_Constraint1" msdata:ConstraintName="Constraint1">
+      <xs:selector xpath=".//mstns:tblQSLConf" />
+      <xs:field xpath="mstns:ConfirmationId" />
+    </xs:unique>
+    <xs:unique name="tblConfirmationTypeKey1">
+      <xs:selector xpath=".//mstns:tblConfirmationType" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+    <xs:keyref name="FK_tblQSLConf_tblConfirmationType" refer="tblConfirmationTypeKey1" msprop:rel_Generator_UserChildTable="tblQSLConf" msprop:rel_Generator_ChildPropName="GettblQSLConfRows" msprop:rel_Generator_UserRelationName="FK_tblQSLConf_tblConfirmationType" msprop:rel_Generator_RelationVarName="relationFK_tblQSLConf_tblConfirmationType" msprop:rel_Generator_UserParentTable="tblConfirmationType" msprop:rel_Generator_ParentPropName="tblConfirmationTypeRow">
+      <xs:selector xpath=".//mstns:tblQSLConf" />
+      <xs:field xpath="mstns:ConfirmationId" />
+    </xs:keyref>
+  </xs:element>
+</xs:schema>

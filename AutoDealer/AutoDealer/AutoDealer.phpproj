@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Name>AutoDealer</Name>
+    <ProjectGuid>9813bc11-0be9-42c8-88af-b701ae24260b</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>
+    </RootNamespace>
+    <ProjectTypeGuids>{A0786B88-2ADB-4C21-ABE8-AA2D79766269}</ProjectTypeGuids>
+    <AssemblyName>AutoDealer</AssemblyName>
+    <SpecificPageValue>index.php</SpecificPageValue>
+    <StartAction>SpecificPage</StartAction>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <IncludeDebugInformation>true</IncludeDebugInformation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <IncludeDebugInformation>false</IncludeDebugInformation>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="categorypage.php" />
+    <Compile Include="coup.php" />
+    <Compile Include="httpHelper.php" />
+    <Compile Include="index.php" />
+    <Compile Include="inventory.php" />
+    <Compile Include="login.php" />
+    <Compile Include="luxury.php" />
+    <Compile Include="TestPage.php" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\autodealer.css" />
+    <Content Include="css\font-awesome.css" />
+    <Content Include="css\menu.css" />
+    <Content Include="HTMLPage1.html" />
+    <Content Include="images\arrow.png" />
+    <Content Include="images\banners\osmbanner1.png" />
+    <Content Include="images\banners\osmbanner2.png" />
+    <Content Include="images\banners\shop-ad-books.jpg" />
+    <Content Include="images\banners\shop-ad.jpg" />
+    <Content Include="images\banners\white.png" />
+    <Content Include="images\Cars-R-Us-logo.png" />
+    <Content Include="images\Cars-R-Us-logo2.png" />
+    <Content Include="images\Cars-R-Us.png" />
+    <Content Include="images\headers\blue-flower.jpg" />
+    <Content Include="images\headers\maple.jpg" />
+    <Content Include="images\headers\raindrops.jpg" />
+    <Content Include="images\headers\walden-pond.jpg" />
+    <Content Include="images\headers\windows.jpg" />
+    <Content Include="images\index.html" />
+    <Content Include="images\joomla_black.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\plus-gray.png" />
+    <Content Include="images\powered_by.png" />
+    <Content Include="images\Vehicles\GalleryPics\BlueTruck0G.jpg" />
+    <Content Include="images\Vehicles\GalleryPics\BlueTruck1G.jpg" />
+    <Content Include="images\Vehicles\GalleryPics\BlueTruck2G.jpg" />
+    <Content Include="images\Vehicles\GalleryPics\BlueTruck3G.jpg" />
+    <Content Include="images\Vehicles\GalleryPics\BlueTruck4G.jpg" />
+    <Content Include="images\Vehicles\GalleryPics\BlueTruck5G.jpg" />
+    <Content Include="images\Vehicles\GalleryPics\BlueTruck6G.jpg" />
+    <Content Include="images\Vehicles\GalleryPics\MazdaMiata0G.jpg" />
+    <Content Include="images\Vehicles\GalleryPics\MazdaMiata1G.jpg" />
+    <Content Include="images\Vehicles\GalleryPics\MazdaMiata2G.jpg" />
+    <Content Include="images\Vehicles\GalleryPics\MazdaMiata3G.jpg" />
+    <Content Include="images\Vehicles\GalleryPics\MazdaMiata4G.jpg" />
+    <Content Include="images\Vehicles\GalleryPics\MazdaMiata5G.jpg" />
+    <Content Include="images\Vehicles\GalleryPics\MazdaMiata6G.jpg" />
+    <Content Include="images\Vehicles\GalleryPics\RedMustang0G.jpg" />
+    <Content Include="images\Vehicles\GalleryPics\VWJetta0G.jpg" />
+    <Content Include="images\Vehicles\GalleryPics\VWJetta1G.jpg" />
+    <Content Include="images\Vehicles\GalleryPics\VWJetta2G.jpg" />
+    <Content Include="images\Vehicles\GalleryPics\VWJetta3G.jpg" />
+    <Content Include="images\Vehicles\GalleryPics\VWJetta4G.jpg" />
+    <Content Include="images\Vehicles\GalleryPics\VWJetta5G.jpg" />
+    <Content Include="images\Vehicles\GalleryPics\VWJetta6G.jpg" />
+    <Content Include="images\Vehicles\GalleryPics\WhiteTruck0G.jpg" />
+    <Content Include="images\Vehicles\LargePics\BlueTruck0L.jpg" />
+    <Content Include="images\Vehicles\LargePics\BlueTruck1L.jpg" />
+    <Content Include="images\Vehicles\LargePics\BlueTruck2L.jpg" />
+    <Content Include="images\Vehicles\LargePics\BlueTruck3L.jpg" />
+    <Content Include="images\Vehicles\LargePics\BlueTruck4L.jpg" />
+    <Content Include="images\Vehicles\LargePics\BlueTruck5L.jpg" />
+    <Content Include="images\Vehicles\LargePics\BlueTruck6L.jpg" />
+    <Content Include="images\Vehicles\LargePics\MazdaMiata0L.JPG" />
+    <Content Include="images\Vehicles\LargePics\MazdaMiata1L.JPG" />
+    <Content Include="images\Vehicles\LargePics\MazdaMiata2L.JPG" />
+    <Content Include="images\Vehicles\LargePics\MazdaMiata3L.JPG" />
+    <Content Include="images\Vehicles\LargePics\MazdaMiata4L.JPG" />
+    <Content Include="images\Vehicles\LargePics\MazdaMiata5L.JPG" />
+    <Content Include="images\Vehicles\LargePics\MazdaMiata6L.JPG" />
+    <Content Include="images\Vehicles\LargePics\RedMustang0L.jpg" />
+    <Content Include="images\Vehicles\LargePics\VWJetta0L.JPG" />
+    <Content Include="images\Vehicles\LargePics\VWJetta1L.JPG" />
+    <Content Include="images\Vehicles\LargePics\VWJetta2L.JPG" />
+    <Content Include="images\Vehicles\LargePics\VWJetta3L.JPG" />
+    <Content Include="images\Vehicles\LargePics\VWJetta4L.JPG" />
+    <Content Include="images\Vehicles\LargePics\VWJetta5L.JPG" />
+    <Content Include="images\Vehicles\LargePics\VWJetta6L.JPG" />
+    <Content Include="images\Vehicles\LargePics\WhiteTruck0L.jpg" />
+    <Content Include="images\Vehicles\SmallPics\BlueTruck0S.jpg" />
+    <Content Include="images\Vehicles\SmallPics\BlueTruck1S.jpg" />
+    <Content Include="images\Vehicles\SmallPics\BlueTruck2S.jpg" />
+    <Content Include="images\Vehicles\SmallPics\BlueTruck3S.jpg" />
+    <Content Include="images\Vehicles\SmallPics\BlueTruck4S.jpg" />
+    <Content Include="images\Vehicles\SmallPics\BlueTruck5S.jpg" />
+    <Content Include="images\Vehicles\SmallPics\BlueTruck6S.jpg" />
+    <Content Include="images\Vehicles\SmallPics\MazdaMiata0S.jpg" />
+    <Content Include="images\Vehicles\SmallPics\MazdaMiata1S.jpg" />
+    <Content Include="images\Vehicles\SmallPics\MazdaMiata2S.jpg" />
+    <Content Include="images\Vehicles\SmallPics\MazdaMiata3S.jpg" />
+    <Content Include="images\Vehicles\SmallPics\MazdaMiata4S.jpg" />
+    <Content Include="images\Vehicles\SmallPics\MazdaMiata5S.jpg" />
+    <Content Include="images\Vehicles\SmallPics\MazdaMiata6S.jpg" />
+    <Content Include="images\Vehicles\SmallPics\RedMustang0S.jpg" />
+    <Content Include="images\Vehicles\SmallPics\VWJetta0S.jpg" />
+    <Content Include="images\Vehicles\SmallPics\VWJetta1S.jpg" />
+    <Content Include="images\Vehicles\SmallPics\VWJetta2S.jpg" />
+    <Content Include="images\Vehicles\SmallPics\VWJetta3S.jpg" />
+    <Content Include="images\Vehicles\SmallPics\VWJetta4S.jpg" />
+    <Content Include="images\Vehicles\SmallPics\VWJetta5S.jpg" />
+    <Content Include="images\Vehicles\SmallPics\VWJetta6S.jpg" />
+    <Content Include="images\Vehicles\SmallPics\WhiteTruck0S.jpg" />
+    <Content Include="index.htm" />
+    <Content Include="js\function.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="MenuStyle.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="css\" />
+    <Folder Include="images\banners\" />
+    <Folder Include="images\headers\" />
+    <Folder Include="images\Vehicles\" />
+    <Folder Include="images\Vehicles\GalleryPics\" />
+    <Folder Include="images\Vehicles\LargePics\" />
+    <Folder Include="images\Vehicles\SmallPics\" />
+    <Folder Include="js\" />
+    <Folder Include="images\" />
+  </ItemGroup>
+</Project>

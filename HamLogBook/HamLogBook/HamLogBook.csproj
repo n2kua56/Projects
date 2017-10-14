@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CC7419EE-D86C-4145-B668-2068ADF41973}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HamLogBook</RootNamespace>
+    <AssemblyName>HamLogBook</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>HamLogBook.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\MySQL\Connector.NET 6.9\Assemblies\v4.5\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommonFields.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommonFields.Designer.cs">
+      <DependentUpon>CommonFields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HLBComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HLBComboBox.Designer.cs">
+      <DependentUpon>HLBComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HLBDateTimePicker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HLBDateTimePicker.Designer.cs">
+      <DependentUpon>HLBDateTimePicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HLBInputBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HLBInputBox.Designer.cs">
+      <DependentUpon>HLBInputBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logger.cs" />
+    <Compile Include="PrintAddressLabels.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintAddressLabels.Designer.cs">
+      <DependentUpon>PrintAddressLabels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintLog.Designer.cs">
+      <DependentUpon>PrintLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowFileLocations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowFileLocations.Designer.cs">
+      <DependentUpon>ShowFileLocations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings1.settings</DependentUpon>
+    </Compile>
+    <Compile Include="XLog2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XLog2.Designer.cs">
+      <DependentUpon>XLog2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XLog2AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XLog2AboutBox.Designer.cs">
+      <DependentUpon>XLog2AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XLogLogEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XLogLogEditor.Designer.cs">
+      <DependentUpon>XLogLogEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XLogNewLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XLogNewLog.Designer.cs">
+      <DependentUpon>XLogNewLog.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CommonFields.resx">
+      <DependentUpon>CommonFields.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HLBComboBox.resx">
+      <DependentUpon>HLBComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HLBDateTimePicker.resx">
+      <DependentUpon>HLBDateTimePicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HLBInputBox.resx">
+      <DependentUpon>HLBInputBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintAddressLabels.resx">
+      <DependentUpon>PrintAddressLabels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowFileLocations.resx">
+      <DependentUpon>ShowFileLocations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XLog2.resx">
+      <DependentUpon>XLog2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XLog2AboutBox.resx">
+      <DependentUpon>XLog2AboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XLogLogEditor.resx">
+      <DependentUpon>XLogLogEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XLogNewLog.resx">
+      <DependentUpon>XLogNewLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Settings1.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings1.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

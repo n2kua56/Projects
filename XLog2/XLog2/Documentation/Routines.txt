@@ -1,0 +1,118 @@
+zSetStateDataSource
+zSetCountyDataSource
+zSelectView
+zRefreshXLog2Grid
+zRefreshHamLogGrid
+zRefreshLogGrid
+zSetStatusMessage
+
+===========================================================
+===========================================================
+
+zSetStateDataSource
+/// <summary>
+/// Loads the State data into the state combobox in
+/// the current view. If there are no states found
+/// the combobox is disabled.
+/// </summary>
+/// <remarks>
+/// Errors like no State combobox (in XLog2 view it
+/// may not have been added to the "QSO" form), and
+/// no states found are handled.  Any other error 
+/// is treated as a system error, a dialog box is
+/// displayed and the user is allowed to continue.
+/// </remarks>
+/// <param name="CountryID"></param>
+
+
+
+zSetCountyDataSource
+/// <summary>
+/// Get the county list for the selected StateID and bind
+/// it to the County ComboBox in the currently selected
+/// view (XLog2 or HamLog). If no county data is found then
+/// display message in lower left and disable the ComboBox.
+/// </summary>
+/// <remarks>
+/// We handle the situation where there is no county data
+/// or in XLog2 view the combobox was not added to the
+/// "QSO" form.
+/// Any system error will display a MessageBox and a message
+/// will be displayed in the lower left.
+/// </remarks>
+/// <param name="StateID"></param>
+
+
+
+zSelectView
+/// <summary>
+/// This selects the view the user wants to see the qso log in:
+/// 1) XLog2 view or 2) HamLog view.
+/// </summary>
+/// <remarks>
+/// Not much that can go wrong here. MySQL down (can't do much
+/// about that) or the refresh routine fails (which has it's 
+/// own error logic).
+/// </remarks>
+
+
+
+zRefreshXLog2Grid
+/// <summary>
+/// Refresh the currently selected log in the XLog2 view.
+/// Get the count of QSO entries to display from the count
+/// radiobuttons.  A count of 0 means all. Display the status
+/// message "Refreshing Log Grid" while the operation runs,
+/// return the message to "Ready" when it's finished.
+/// </summary>
+/// <remarks>
+/// The program can continue if there is an error. Exceptions
+/// are to be displayed in MessageBox. The status message will 
+/// display the "Failed to refresh the log grid".
+/// </remarks>
+
+                
+
+zRefreshHamLogGrid
+/// <summary>
+//// Refresh the current log in the HamLog view.
+/// Get the count of QSO entries to display from the count
+/// radiobuttons.  A count of 0 means all. Display the status
+/// message "Refreshing Log Grid" while the operation runs,
+/// return the message to "Ready" when it's finished.
+/// </summary>
+/// <remarks>
+/// The program can continue if there is an error. Exceptions
+/// are to be displayed in MessageBox. The status message will 
+/// display the "Failed to refresh the log grid".
+/// </remarks>
+
+
+
+zRefreshLogGrid
+/// <summary>
+/// Seperate routine in case there needs to be other actions.
+/// </summary>
+/// <remarks>
+/// If this failes the calling routine will catch the exception.
+/// </remarks>
+/// <param name="dgv"></param>
+/// <param name="logName"></param>
+/// <param name="count"></param>
+
+
+
+zSetStatusMessage
+/// <summary>
+/// This routine will set the status message in the lower
+/// left corner of the form.  It also calls a DoEvent() to
+/// make sure the message is displayed.
+/// </summary>
+/// <remarks>
+/// This routine is too simple and difficult to see a failure 
+/// that no exception handler is included.  The calling
+/// function may or may not handle any exception that could
+/// possibly show up, but difficult to imagine any exception
+/// could be thrown.
+/// </remarks>
+/// <param name="msg"></param>
